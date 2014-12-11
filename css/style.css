@@ -3605,7 +3605,7 @@ blockquote.default {
 	background: url('../images/bg_3.jpg') no-repeat;
 	background-size: 100%;
 	color: #fff;
-	padding: 20px 0px 20px 0px;
+	padding: 40px 0px 50px 0px;
 	}
 
 .hero h1 {
@@ -3877,21 +3877,37 @@ blockquote.default {
 }
 
 /* 34. SERVICE */
+/* 34. SERVICE */
 .ico {
 color: #d24537;
 width: 80px;
 height: 80px;
 line-height: 80px;
-font-size: 55px;
+font-size: 75px;
 margin: 0 auto 15px;
 text-align: center;
-padding: 15px;
+padding: 10px;
+margin-bottom: 25px;
 }
 
-.serviceBox_1 {
+.serviceBox_4 {
+	text-align: center;
+}
+
+.serviceBox_4 p {
 	text-align: justify;
 }
 
-.serviceBox_1 i, .serviceBox_1 h3 {
-	text-align: center;
+.serviceBox_4 h3 {
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 3%;
+	position: relative;
+	margin-top: 0;
+}
+
+.serviceBox_4 img {
+margin: 0 auto 15px;
+text-align: center;
+padding: 10px;
 }
