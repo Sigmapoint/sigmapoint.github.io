@@ -3630,7 +3630,7 @@ blockquote.default {
 	margin: 20px;
 }
 
-@media only screen and (max-width:1200px) {
+@media (max-width:1200px) {
 	.hero {
 	background: url('../images/bg_3.jpg') no-repeat;
 	color: #fff;
