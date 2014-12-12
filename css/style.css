@@ -2486,6 +2486,17 @@ ul.client_items {
     position: relative;
     display: block;
 }
+
+.client_items img {
+	-webkit-filter: grayscale(1); -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%);
+filter: gray; filter: grayscale(100%);
+filter: url(desaturate.svg#greyscale);
+ opacity: 0.3;
+    filter: alpha(opacity=30); /* For IE8 and earlier */
+}
+
+
+
 /*--------------------------------------------------------------------------*/
 /* 16. TYPOGRAPHY
 /*--------------------------------------------------------------------------*/
@@ -3630,7 +3641,7 @@ blockquote.default {
 	margin: 20px;
 }
 
-@media (max-width:1200px) {
+@media (max-width:1199px) {
 	.hero {
 	background: url('../images/bg_3.jpg') no-repeat;
 	color: #fff;
