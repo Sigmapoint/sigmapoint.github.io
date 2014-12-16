@@ -3615,7 +3615,6 @@ blockquote.default {
 
 .hero {
 	background: url('../images/bg_3.jpg') no-repeat;
-
 	color: #fff;
 	padding: 40px 0px 50px 0px;
 	}
@@ -3642,10 +3641,11 @@ blockquote.default {
 	margin: 20px;
 }
 
-@media (max-width:1199px) {
+@media (min-width:1199px) {
 	.hero {
 	background: url('../images/bg_3.jpg') no-repeat;
 	color: #fff;
+	background-size: 100%;
 	padding: 40px 0px 50px 0px;
 	}
 }
