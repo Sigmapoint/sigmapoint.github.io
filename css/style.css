@@ -3954,3 +3954,13 @@ background-color: #d24537;
 position: absolute;
 bottom: -35px;
 }
+
+/* TABS */
+
+.tab-pane p {
+	text-align: justify;
+}
+
+.tab-pane h3 {
+	text-align: center;
+}

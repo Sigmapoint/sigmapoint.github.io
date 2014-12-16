@@ -30,6 +30,7 @@
 </head>
 <body>
 	<!--Start Header-->
+	<span id="id_top_bar"></span>
 	<header id="header" class="clearfix">
         <div id="top-bar">
             <div class="container">
@@ -71,7 +72,7 @@
 							<a href="http://www.sigmapoint.pl"><img src="images/logo_sigmapoint.png" class="img-responsive" style="padding-top: 10px; float:left"></a>
 					   <ul class="nav navbar-nav pull-right">
 							
-							<li><a href="#top-bar">Home</a>
+							<li><a href="#id_top-bar">Home</a>
                             </li>
 
 							<li><a href="#id_services">Services</a>
@@ -120,7 +121,7 @@
 		<!--End Jumbotron -->
 		
 		<!--start info service-->
-		<section class="info_service" id="id_services">
+		<section class="info_service scroll" id="id_services">
 			<div class="container">
 			
 				<div class="row sub_content">
@@ -237,7 +238,6 @@
 						<li data-target="#carousel-example-generic" data-slide-to="8"></li>
 						<li data-target="#carousel-example-generic" data-slide-to="9"></li>
 						<li data-target="#carousel-example-generic" data-slide-to="10"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="11"></li>
 					</ol>
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
@@ -356,61 +356,167 @@
 								<p>ToCoMoje is a mobile receipt scaner that lets you scan and keep your receipts in case of return of damaged or faulty goods. Our team was responsible for design &amp; development both apps and integration with Stackmob.</p>
 							</div>
 						</div> 
-					</div>
-					<!-- Controls 
-					  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
-					  </a>
-					  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
-					  </a>
-					 -->
+					</div>			 
 				</div>
 			</div>
 		</div>
 		<!--END recent work-->
-			<section class="content service" id="id_technology">
+			<section class="content service scroll" id="id_technology">
 			<div class="container">
 				<div class="row sub_content">
 					<div class="col-md-12 col-lg-12">
 						<div class="dividerHeading">
 							<h4><span>Technology</span></h4>
 						</div>
-					</div>
-					<div class="col-sm-4 col-md-4 col-lg-4">
-						<div class="serviceBox_4">
-							<i class="fa fa-apple ico"></i>
-							<h3>iOS Development</h3>
-							<p>With iOS being one of the leading mobile platform, it is vital to ensure its appropriate treatment. In iOS apps our developers create pixel-perfect UI following  <a href="https://developer.apple.com/library/iOS/documentation/userexperience/conceptual/mobilehig/" target="_blank">Human Interface Guidelines</a>. We love <a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/Introduction/Introduction.html" target="_blank">Constraints and AutoLayout</a> so our apps scale easily on iPhones and iPads. With responsiveness in our mind we utilize top Apple’s technologies like <a href="http://www.objc.io/issue-4/core-data-overview.html" target="_blank">CoreData</a>, <a href="https://developer.apple.com/library/ios/documentation/Performance/Reference/GCD_libdispatch_Ref/Reference/reference.html" target="_blank">GCD</a> background queues and <a href=" https://developer.apple.com/notifications/">push notifications</a> to make your app work smoothly and be rock solid. If something goes wrong anyway, we let <a href="https://try.crashlytics.com/" target="_blank">Crashlytics</a> hold our back.</p>
+						<div role="tabpanel">
+
+						  <!-- Nav tabs -->
+						<ul class="nav nav-tabs" id="myTab">
+							<li class="active"><a data-toggle="tab" href="#mobile_tab">Mobile Development</a></li>
+							<li class=""><a data-toggle="tab" href="#backend_frontend_tab">Backend / Frontend</a></li>
+						 </ul>
+
+						  <!-- Tab panes -->
+						  <div class="tab-content clearfix" id="myTabContent">
+							<div id="mobile_tab" class="tab-pane fade active in">
+								<div class="row">
+								<div class="col-md-4 col-sm-12 col-xs-12">
+									<h3>Android development</h3>
+									<p>With iOS being one of the leading mobile platform, it is vital to ensure its appropriate treatment. In iOS apps our developers create pixel-perfect UI following  <a href="https://developer.apple.com/library/iOS/documentation/userexperience/conceptual/mobilehig/" target="_blank">Human Interface Guidelines</a>. We love <a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/Introduction/Introduction.html" target="_blank">Constraints and AutoLayout</a> so our apps scale easily on iPhones and iPads. With responsiveness in our mind we utilize top Apple’s technologies like <a href="http://www.objc.io/issue-4/core-data-overview.html" target="_blank">CoreData</a>, <a href="https://developer.apple.com/library/ios/documentation/Performance/Reference/GCD_libdispatch_Ref/Reference/reference.html" target="_blank">GCD</a> background queues and <a href=" https://developer.apple.com/notifications/">push notifications</a> to make your app work smoothly and be rock solid. If something goes wrong anyway, we let <a href="https://try.crashlytics.com/" target="_blank">Crashlytics</a> hold our back.</p>
+								</div>
+								<div class="col-md-4 col-sm-12 col-xs-12">
+									<h3>iOS Development</h3>
+									<p>With iOS being one of the leading mobile platform, it is vital to ensure its appropriate treatment. In iOS apps our developers create pixel-perfect UI following  <a href="https://developer.apple.com/library/iOS/documentation/userexperience/conceptual/mobilehig/" target="_blank">Human Interface Guidelines</a>. We love <a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/Introduction/Introduction.html" target="_blank">Constraints and AutoLayout</a> so our apps scale easily on iPhones and iPads. With responsiveness in our mind we utilize top Apple’s technologies like <a href="http://www.objc.io/issue-4/core-data-overview.html" target="_blank">CoreData</a>, <a href="https://developer.apple.com/library/ios/documentation/Performance/Reference/GCD_libdispatch_Ref/Reference/reference.html" target="_blank">GCD</a> background queues and <a href=" https://developer.apple.com/notifications/">push notifications</a> to make your app work smoothly and be rock solid. If something goes wrong anyway, we let <a href="https://try.crashlytics.com/" target="_blank">Crashlytics</a> hold our back.</p>
+								</div>
+								<div class="col-md-4 col-sm-12 col-xs-12">
+									<h3>Windows Phone Development</h3>
+									<p>As Windows Phone Developers we strive to provide consistent and satisfying user experience with the help of <a href="http://phone.codeplex.com/" target="_blank">Windows Phone Toolkit</a> and Blend for Visual Studio. All of this would not be possible without data to present. <a href="http://james.newtonking.com/json" target="_blank">Json.NET</a> fits perfectly for the task of obtaining it from self-built service, while <a href="https://parse.com/" target="_blank">Parse</a>, with its .NET SDK, helps us managing it in the cloud. Furthermore, both technologies remain in excellent harmony with .NET's <a href="http://msdn.microsoft.com/en-us/library/bb397926.aspx" target="_blank">LINQ</a> making local data management a piece of cake.</p>
+								</div>
+								</div>								
+								<div class="row">
+									<h3>Technologies we rely on:</h3>
+									</br>
+									<div class="col-lg-3 col-md-3 col-sm-6">
+										<ul class="list_style circle">
+											<li><a href="#"><i class="fa fa-angle-right"></i> ORMLite</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Roboelectric</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Gradle</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Robospice</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> GSON</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Universal Image Loader</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> libGDX</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Google Cloud Messaging</a></li>
+										</ul>
+									</div>
+									<div class="col-lg-3 col-md-3 col-sm-6">
+										<ul class="list_style circle">
+											<li><a href="#"><i class="fa fa-angle-right"></i> Box2d </a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Flurry </a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Google Analytics </a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Espresso/Robotium </a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Universal Image Loader</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Crashlytics</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> OkHttp </a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> AndEngine </a></li>
+										</ul>
+									</div>
+									<div class="col-lg-3 col-md-3 col-sm-6">
+										<ul class="list_style circle">
+											<li><a href="#"><i class="fa fa-angle-right"></i> APNS </a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Core Location </a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Core Data </a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Map Kit </a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> APNS </a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Core Location </a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Core Data </a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Map Kit </a></li>
+										</ul>
+									</div>
+									<div class="col-lg-3 col-md-3 col-sm-6">
+										<ul class="list_style circle">
+											<li><a href="#"><i class="fa fa-angle-right"></i> Core Animation </a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> CocoaPods </a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> AFNetworking </a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> MagicalRecord </a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> CocoaLumberjack </a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Sprite Kit </a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Cocos 2D </a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Swift </a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div id="backend_frontend_tab" class="tab-pane">
+								<div class="col-md-4 col-sm-12 col-xs-12">
+									<h3>Java/Scala PlayFramework</h3>
+									<p>Have you ever thought about <a href="https://www.java.com/" target="_blank">Java</a> &amp; <a href="https://www.scala-lang.org/" target="_blank">Scala</a> as a perfect choice for your web development? <a href="http://www.playframework.com//" target="_blank">Play Framework</a> introduced solid and fast ecosystem for those languages! Owing to Play, we make it easy to build modern web &amp; mobile.  JVM does the heavy lifting, <a href="http://maven.apache.org/">Maven</a> delivers the whole world weal and <a href="http://mongodb.org/">NoSQL</a> supports Big Data so that our apps are super-fast and keeps under load. Asynchronous <a href="http://akka.io/">Akka</a> model and being stateless make our apps behaving predictably and reliably. <a href="https://www.ietf.org/rfc/rfc2616.txt">RESTful</a> by default and JSON based communication combined with foreman and  <a href="https://www.heroku.com/" target="_blank">Heroku</a> cloud give you what modern web and mobile need nowadays.</p>
+								</div>
+								<div class="col-md-4">
+									<h3>Node.js</h3>
+									<p>We build fast, efficient and flexible backends using <a href="http://nodejs.org/">Node.js</a> as their core. With  <a href="https://www.mongodb.org/" target="_blank">	MongoDB</a> as data storage we obtain durable system, ready to persist everything you can imagine. But what would be the system if it could not manifest it's greatness to the outside world? There comes express, a web application framework which along with diverse modules provides simple yet powerful communication mechanism. However with great power comes great responsibility, thus high code quality is a must. There comes <a href="https://github.com/mhevery/jasmine-node" target="_blank">Jasmine</a> with it's behavior-driven test framework. Alongside other supportive tools such as  <a href="https://www.jshint.com/" target="_blank">JSHint</a> they guard what we value the most.</p>
+								</div>
+								<div class="col-md-4">
+									<h3>AngularJS</h3>
+									<p>We like simple solutions and new technologies, so we use <a href="https://angularjs.org/" target="_blank">AngularJS</a> and <a href="http://en.wikipedia.org/wiki/HTML_5
+									">HTML5</a> for web developing. AngularJS gives us power to build single-page apps that are easily extensible. It lets us encapsulate client-side logic in a standarized form with clear responsibilities. <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> helps us to build great looking apps on desktops and moblie web browsers, so you can use our products on every device. We appreciate when our products can be built with one command and we achieve that with <a href="http://gruntjs.com/">Grunt</a> and <a href="http://bower.io/">Bower</a>. To keep client feedback loop short and responsive we deploy often to <a href="http://www.heroku.com/">Heroku</a> during development so you can always see current development progress.</p>
+								</div>								
+								<div class="row">
+									<h3>Technologies we rely on:</h3>
+									</br>
+										<ul class="list_style square">
+											<div class="col-lg-3 col-md-3 col-sm-6">
+											<li><a href="#"><i class="fa fa-angle-right"></i> RESTful services</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Play Framework 2 + by Typesafe</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Akka</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Apache Maven</a></li>											
+											<li><a href="#"><i class="fa fa-angle-right"></i> MongoDB (MongoJack)</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Java/Scala</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> jsoup</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Node.js</a></li>
+											</div>
+											<div class="col-lg-3 col-md-3 col-sm-6">
+											<li><a href="#"><i class="fa fa-angle-right"></i> Foreman</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Heroku</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> JVM</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> NoSQL</a></li>											
+											<li><a href="#"><i class="fa fa-angle-right"></i> AngularJS</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Bootstrap 3.0</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> HTML5/CSS3</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Yeoman</a></li>
+											</div>
+											<div class="col-lg-3 col-md-3 col-sm-6">
+											<li><a href="#"><i class="fa fa-angle-right"></i> Bower</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Grunt</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Angularstrap</a></li>	
+											<li><a href="#"><i class="fa fa-angle-right"></i> Chart.js</a></li>	
+											<li><a href="#"><i class="fa fa-angle-right"></i> D3.js</a></li>											
+											<li><a href="#"><i class="fa fa-angle-right"></i> Express.js</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Jasmine</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Socket.io</a></li>
+											</div>
+											<div class="col-lg-3 col-md-3 col-sm-6">
+											<li><a href="#"><i class="fa fa-angle-right"></i> Facebook SDK</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Twitter SDK</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Google Maps API</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Parse</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Mandrill</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Mailchimp</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Google Analytics</a></li>
+											<li><a href="#"><i class="fa fa-angle-right"></i> Mixpanel</a></li>		
+											</div>											
+										</ul>
+								</div>
+							</div>
 						</div>
+						  </div>
+
 					</div>
-					<div class="col-sm-4 col-md-4 col-lg-4">
-						<div class="serviceBox_4">
-							<i class="fa fa-android ico"></i>
-							<h3>Android Development</h3>
-							<p>Android is one of our main mobile priority, therefore during app development process we pay attention to "clean code" rule and clear user interface, well-fitting on every device, and just so you know, we can <a href="https://developer.android.com/about/dashboards/index.html" target="_blank">support 99% of Android devices on market (starting from Android 2.3.3)</a> so you don't have to worry about reaching your clients. Our Android developers use various approaches to develop solid Android application, covering it with <a href="http://robolectric.org/" target="_blank">Robolectric</a> unit tests, and letting <a href="https://github.com/stephanenicolas/robospice
-							" target="_blank">Robospice</a> or <a href="https://github.com/mcxiaoke/android-volley
-							" target="_blank">Volley</a> handle network requests. For persistance and marshalling of data we use <a href="http://ormlite.com/
-							" target="_blank">OrmLite</a> and <a href="https://code.google.com/p/google-gson/" target="_blank">Gson</a>.</p>
-						</div>
-					</div>
-					<div class="col-sm-4 col-md-4 col-lg-4">
-						<div class="serviceBox_4">
-							<i class="fa fa-windows ico"></i>
-							<h3>Windows Phone Development</h3>
-							<p>As Windows Phone Developers we strive to provide consistent and satisfying user experience with the help of <a href="http://phone.codeplex.com/" target="_blank">Windows Phone Toolkit</a> and Blend for Visual Studio. Native animations framework allows us to build astonishing user interfaces which fondle your imagination. All of this would not be possible without data to present. <a href="http://james.newtonking.com/json" target="_blank">Json.NET</a> fits perfectly for the task of obtaining it from self-built service, while <a href="https://parse.com/" target="_blank">Parse</a>, with its .NET SDK, helps us managing it in the cloud. Furthermore, both technologies remain in excellent harmony with .NET's <a href="http://msdn.microsoft.com/en-us/library/bb397926.aspx" target="_blank">LINQ</a> making local data management a piece of cake.</p>
-						</div>
-					</div>
-					<div class="col-sm-4 col-md-4 col-lg-4">
-						<div class="serviceBox_4">
-							<img src="images/icon_logo_angularjs.png" class="img-responsive">
-							<h3>AngularJS</h3>
-							<p>We like simple solutions and new technologies, so we use <a href="https://angularjs.org/" target="_blank">AngularJS</a> and <a href="http://en.wikipedia.org/wiki/HTML_5
-							">HTML5</a> for web developing. AngularJS gives us power to build single-page apps that are easily extensible. It lets us encapsulate client-side logic in a standarized form with clear responsibilities. <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> helps us to build great looking apps on desktops and moblie web browsers, so you can use our products on every device. We appreciate when our products can be built with one command and we achieve that with <a href="http://gruntjs.com/">Grunt</a> and <a href="http://bower.io/">Bower</a>. To keep client feedback loop short and responsive we deploy often to <a href="http://www.heroku.com/">Heroku</a> during development so you can always see current development progress.</p>
-						</div>
-					</div>
+				</div>
+					
+            </div>
+					<!-- technologies icons 
+					
+					
 					<div class="col-sm-4 col-md-4 col-lg-4">
 						<div class="serviceBox_4">
 							<img src="images/icon_logo_playyframework.png" class="img-responsive">
@@ -425,9 +531,7 @@
 							<p>We build fast, efficient and flexible backends using <a href="http://nodejs.org/">Node.js</a> as their core. With  <a href="https://www.mongodb.org/" target="_blank">MongoDB</a> as data storage we obtain durable system, ready to persist everything you can imagine. But what would be the system if it could not manifest it's greatness to the outside world? There comes express, a web application framework which along with diverse modules provides simple yet powerful communication mechanism. However with great power comes great responsibility, thus high code quality is a must. There comes <a href="https://github.com/mhevery/jasmine-node" target="_blank">Jasmine</a> with it's behavior-driven test framework. Alongside other supportive tools such as  <a href="https://www.jshint.com/" target="_blank">JSHint</a> they guard what we value the most.</p>
 						</div>
 					</div>
-				</div>
-			
-			</div>
+					-->
 		</section>
 		<section class="fetaure_bottom">
 			<div class="container">
@@ -666,26 +770,25 @@
     </script>
 	<script>
 $(document).ready(function(){
-	$('a[href^="#"]').on('click',function (e) {
 		
-		console.log('onClick');
+						
+		
+			
+			$('a[href^="#id"]').on('click',function (e) {
+			e.preventDefault();
 
-	    e.preventDefault();
-
-	    var target = this.hash,
-	    $target = $(target);
-
-	    var $scrollTop = $target.offset() ? $target.offset().top - 40 : 0;
-
-	   	console.log($scrollTop);
-
-	    $('html, body').stop().animate({
-	        'scrollTop': $scrollTop
-	    }, 900, 'swing', function () {
-	        window.location.hash = target;
-	    });
+			var target = this.hash;
+			var $target = $(target);
+			var $scrollTop = $target.offset() ? $target.offset().top - 40 : 0;
+			
+			$('html, body').stop().animate({
+				'scrollTop': $scrollTop
+			}, 900, 'swing', function () {
+				window.location.hash = target;
+			});
+		});
+			
 	});
-});
 </script>
 </body>
 </html>
