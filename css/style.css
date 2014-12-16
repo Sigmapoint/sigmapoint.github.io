@@ -3946,7 +3946,7 @@ border-radius: 10px;
 .carousel-indicators .active {
 width: 12px;
 height: 12px;
-margin: 0px;
+margin: 1px;
 background-color: #d24537;
 }
 
