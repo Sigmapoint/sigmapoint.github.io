@@ -3979,3 +3979,7 @@ bottom: -35px;
 .vertical-center {
   padding: 40px 10px 40px 10px;
 }
+
+.col-sm-7 .top-info .hidden-xs .hidden-sm a {
+	color: blue;
+}
