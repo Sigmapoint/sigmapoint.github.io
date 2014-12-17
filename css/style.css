@@ -3641,13 +3641,15 @@ blockquote.default {
 	margin: 20px;
 }
 
-@media (min-width:1199px) {
-	.hero {
+.hero-thank-you {
+	height: 100%;
 	background: url('../images/bg_3.jpg') no-repeat;
-	color: #fff;
 	background-size: 100%;
+	color: #fff;
 	padding: 40px 0px 50px 0px;
-	}
+}
+@media (-width:1199px) {
+
 }
 
 /* ===================================================== */
@@ -3963,4 +3965,17 @@ bottom: -35px;
 
 .tab-pane h3 {
 	text-align: center;
+}
+
+/* COOKIES */
+.cookies-close {
+	position: absolute;
+	top: 8px;
+	right: 2%;
+	color: red;
+	font-size: 18px;
+}
+
+.vertical-center {
+  padding: 40px 10px 40px 10px;
 }
