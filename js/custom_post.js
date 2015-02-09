@@ -15,9 +15,11 @@ function post_data(){
     var xhr = new XMLHttpRequest();
 
 
-    xhr.open("POST", automail_url, true);
+    xhr.open("POST", automail_url, false);
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
 
     // send the collected data as JSON
     xhr.send(JSON.stringify(data));
+
+    console.log("Done")
 }
