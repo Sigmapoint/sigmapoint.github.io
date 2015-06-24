@@ -3510,10 +3510,11 @@ blockquote.default {
     float: none;
 }
 .footbot_social li a.fb:hover            {background:#1964DA; border-radius: 5px; color:#fff;}
-.footbot_social li a.twtr:hover          {color: #fff; background:#3ABDD1; border-radius:5px;}
+.footbot_social li a.github:hover        {background: #373737; border-radius: 5px; color:#fff;}
+.footbot_social li a.twitter:hover       {color: #fff; background:#3ABDD1; border-radius:5px;}
 .footbot_social li a.gmail:hover         {color: #fff;}
 .footbot_social li a.pinterest:hover     {color: #fff;}
-.footbot_social li a.rss:hover           {color: #fff; background:#F15200; border-radius:5px;}
+.footbot_social li a.rss:hover           {color: #fff; background:#dd4b39; border-radius:5px;}
 .footbot_social li a.tumblr:hover        {color: #fff;}
 .footbot_social li a.flickr:hover        {color: #fff;}
 .footbot_social li a.instagram:hover     {color: #fff;}
@@ -3529,6 +3530,7 @@ blockquote.default {
     padding: 0;
     margin:0;
     list-style:none;
+    cursor: default;
 }
 .list_style li {
     line-height: 30px;
