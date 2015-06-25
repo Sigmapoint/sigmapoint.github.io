@@ -668,7 +668,7 @@
 			</div>
 		</div>
 	</section>
-	<div id="CookieAlert" style="position:fixed;bottom:-1px;left:0px;right:0px;text-align:center;width:100%;z-index:1000;padding:10px; background-color:#1b1b1b; color:#999; text-shadow: 1px 1px 0px rgba(255,255,255,0.1); border-top:1px solid #444; border-bottom:1px solid #444; box-shadow:0px 0px 8px rgba(0, 0, 0, 0.15);">
+	<div id="CookieAlert" style="position:fixed;bottom:-1px;left:0px;right:0px;text-align:center;width:100%;z-index:1000;padding:10px; background-color:#1b1b1b; color:#999; text-shadow: 1px 1px 0px rgba(255,255,255,0.1); border-top:1px solid #444; border-bottom:1px solid #444; box-shadow:0px 0px 8px rgba(0, 0, 0, 0.15); visibility: hidden;">
 	The cookie settings on this website are set to 'allow all cookies' to give you the very best experience. <button class="cookies_btn btn btn-xs btn-danger">Close</button>
 	</div>
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
@@ -725,8 +725,22 @@ $(document).ready(function(){
 		});
 		
 		$( ".cookies_btn" ).click(function() {
+            $.cookie('cookiesConfirmed', '7', { expires: 365 });
 			$( "#CookieAlert" ).fadeOut( "fast", function(){});
 		});
+
+        if(!$.cookie('cookiesConfirmed')) {
+            console.log('wtf?');
+            $('#CookieAlert').css('visibility', 'visible');
+        }
+
+        var $collapsibleNavbar = $('.navbar-collapse');
+        var $navbarButtons = $('.navbar-collapse a');
+        $navbarButtons.on('click', function () {
+            $collapsibleNavbar.animate({'height': '1px'}, 300, function () {
+                $collapsibleNavbar.removeClass('in');
+            });
+        });
 	});
 	
 </script>

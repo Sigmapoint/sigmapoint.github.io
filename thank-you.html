@@ -83,8 +83,7 @@
                                 <li><a href="index.html#id_portfolio">Portfolio</a>
                                 </li>
 
-                                <li><a href="index.html
-                                #id_technology">Technology</a>
+                                <li><a href="index.html#id_technology">Technology</a>
                                 </li>
 
                                 <!-- <li><a href="#">Careers</a>
@@ -200,6 +199,14 @@ $(document).ready(function(){
 		$( ".cookies_btn" ).click(function() {
 			$( "#CookieAlert" ).fadeOut( "fast", function(){});
 		});
+
+        var $collapsibleNavbar = $('.navbar-collapse');
+        var $navbarButtons = $('.navbar-collapse a');
+        $navbarButtons.on('click', function () {
+            $collapsibleNavbar.animate({'height': '1px'}, 300, function () {
+                $collapsibleNavbar.removeClass('in');
+            });
+        });
 	});
 	
 </script>
