@@ -4008,13 +4008,13 @@ bottom: -35px;
 }
 
 .label-default {
-    background-color: #e74c3c;
+    background-color: rgb(205, 76, 60);
     cursor: pointer;
     font-weight: 600;
 }
 
 .label-default-tech {
-    background-color: rgba(231, 76, 60, 0.77);
+    background-color: rgb(240, 76, 60);
     cursor: pointer;
     font-weight: 600;
 }
