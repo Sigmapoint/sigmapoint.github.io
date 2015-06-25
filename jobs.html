@@ -351,6 +351,14 @@ $(document).ready(function(){
             console.log('wtf?');
             $('#CookieAlert').css('visibility', 'visible');
         }
+
+        var $collapsibleNavbar = $('.navbar-collapse');
+        var $navbarButtons = $('.navbar-collapse a');
+        $navbarButtons.on('click', function () {
+            $collapsibleNavbar.animate({'height': '1px'}, 300, function () {
+                $collapsibleNavbar.removeClass('in');
+            });
+        });
 	});
 	
 </script>
