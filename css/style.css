@@ -2756,6 +2756,7 @@ ul.nav-tabs li.last-tab a
 {
     border:1px solid #ebebeb;
     padding:20px 14px;
+    margin-bottom: 35px;
 }
 .tab-content:first-child { display: block;}
 .tab-content > h3 {
@@ -2763,7 +2764,9 @@ ul.nav-tabs li.last-tab a
     font-size: 20px;
     font-weight: 600;
     line-height: 24px;
-    margin-top: 0;
+    margin: 0 auto 20px auto;
+    width: 50%;
+    border-bottom: 1px solid #ebebeb;
 }
 .tab-content > p {
     font-family: lato;
@@ -3987,3 +3990,38 @@ bottom: -35px;
   padding: 40px 10px 40px 10px;
 }
 
+.nav_logo {
+    width: 120px;
+    height: auto;
+}
+
+.project {
+    margin-top: 50px;
+}
+
+.available_on {
+    width: 129px;
+}
+
+.project h2 {
+    margin-top: 0;
+}
+
+.label-default {
+    background-color: #e74c3c;
+    cursor: pointer;
+}
+
+.label-default-tech {
+    background-color: rgba(231, 76, 60, 0.77);
+    cursor: pointer;
+}
+
+.label-default a, .label-default-tech a {
+    color: #fff;
+    transition: 0.2s ease-out;
+}
+.label-default a:hover, .label-default-tech a:hover {
+    color: #dedede;
+    transition: 0.2s ease-out;
+}
