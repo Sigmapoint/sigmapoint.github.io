@@ -4027,3 +4027,12 @@ bottom: -35px;
     color: #dedede;
     transition: 0.2s ease-out;
 }
+
+.alert {
+    color: rgb(205, 76, 60);
+}
+
+.icon_service > img {
+    width: 50px;
+    height: auto;
+}
