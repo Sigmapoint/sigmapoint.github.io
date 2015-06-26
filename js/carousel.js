@@ -210,6 +210,23 @@
   $(window).on('load', function () {
     $('[data-ride="carousel"]').each(function () {
       var $carousel = $(this)
+      var $images = $carousel.find('.item > div:first-child');
+      var $descriptions = $carousel.find('.item > div:last-child');
+      var imageHeights = _.map($images, function (i) {
+          return $(i).height();
+      });
+      var descriptionHeights = _.map($descriptions, function (d, idx) {
+          var $d = $(d);
+          var h = $d.height();
+          if (idx > 0) {
+            $d.parent().removeClass('active');
+          }
+          return h;
+      });
+      var commonDescriptionHeight = Math.max.apply(null, descriptionHeights);
+      var commonImageHeight = Math.max.apply(null, imageHeights);
+      $images.css('height', commonImageHeight + 'px');
+      $descriptions.css('height', commonDescriptionHeight + 'px');
       $carousel.carousel($carousel.data())
     })
   })
