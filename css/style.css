@@ -4007,6 +4007,10 @@ bottom: -35px;
     margin-top: 0;
 }
 
+.tags {
+    margin-bottom: 30px;
+}
+
 .label-default {
     background-color: rgb(205, 76, 60);
     cursor: pointer;
@@ -4035,4 +4039,17 @@ bottom: -35px;
 .icon_service > img {
     width: 50px;
     height: auto;
+}
+.icon_service.mobile {
+    height: 50px;
+}
+.icon_service.mobile > h3 {
+    line-height: 25px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.tab-pane > h3 {
+    margin: 50px auto 40px auto;
+    padding-bottom: 20px;
 }
