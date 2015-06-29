@@ -1,0 +1,10 @@
+---
+title: iTweak
+subtitle: Wireless Sound Controller Using MIDI Signals
+image: images/portfolio/Sigmapoint_iTweak_iOS_app-480.png
+technologies:
+  - iOS
+available:
+---
+
+iTweak is an iPad app developed in cooperation with Nonagram Sound Studio mainly for recording studio purposes. It enables a sound engineer to control set of different parameters of a recording software remotely with a feeling of analog device. Instead of using a mouse and keyboard shortcuts, whose performance is limited it gives a hands-on experience without a need of buying very expensive hardware wired USB controller. Bright and visible coloring makes it comfortable to use in low light situations, such as studio mixing session, live concert or DJ performance.

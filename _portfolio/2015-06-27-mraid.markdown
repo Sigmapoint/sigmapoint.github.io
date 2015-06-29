@@ -1,0 +1,11 @@
+---
+title: Mobile Ads SDK
+subtitle: (compatible with Mraid v2)
+image: images/portfolio/Sigmapoint_mobile_480_1.jpg
+technologies:
+  - iOS
+  - Android
+available:
+---
+
+SDK for iOS and Android that allows developer to place advertisements in his app (like Google AdMob or Apple iAd). It uses our partner’s custom Ad Server and is compatible with Mraid v2 specification. Besides the ad displaying framework itself we also created bridge for WebView that enables two-way interaction between our mraid.js library and native code for both iOS and Android.

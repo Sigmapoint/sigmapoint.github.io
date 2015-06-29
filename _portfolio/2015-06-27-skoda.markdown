@@ -1,0 +1,10 @@
+---
+title: Skoda Photo Center
+subtitle: Photo Creator for Samsung Galaxy Camera
+image: images/portfolio/Sigmapoint_Skoda_Android_app-480.jpg
+technologies:
+  - Android
+available:
+---
+
+Skoda Photo Center is a special app for Samsung Galaxy Camera ek-gc100 that allows you to become a hockey star in just one moment! We used various Android libraries, developer skills and experience gained from another projects to create fully working application so user can manipulate his own photo on many levels, merge it with previously chosen "hockey player background image" and finally send it via email. We also used REST API to provide backup for all photos on a server.

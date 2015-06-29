@@ -1,0 +1,12 @@
+---
+title: Loyali
+subtitle: Mobile Loyalty System
+image: images/portfolio/Sigmapoint_Loyali_mobile_loyal_app_iOS_app-480.jpg
+technologies:
+  - iOS
+  - Backend
+  - Web
+available:
+---
+
+Loyali is a mobile loyalty program. Loyali includes mobile app for iOS and web dashboard that enables shop owners to send PUSH notifications based on target & demographics. The whole system will be integrated with Estiomte Beacons API - small, wireless sensors that use Bluetooth low energy (BLE) to detect the location of nearby smartphones and communicate (in development).

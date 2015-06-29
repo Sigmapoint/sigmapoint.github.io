@@ -1,0 +1,11 @@
+---
+title: My Saeco
+subtitle: App for Saeco Coffee Machine Owners
+image: images/portfolio/Sigmapoint_Saeco_Philips_Android_iOS_app-480.jpg
+technologies:
+  - iOS
+  - Android
+available:
+---
+
+My Saeco is a mobile app for Android & iPhone developed in cooperation with Red Mobile for Philips Polska. My Saeco is a dedicated app for Saeco coffee machines owners that provides instructions, recipies, clock alarm and many interesting facts & videos about making coffee.

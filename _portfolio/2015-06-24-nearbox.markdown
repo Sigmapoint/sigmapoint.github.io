@@ -1,0 +1,16 @@
+---
+title: Nearbox
+subtitle: Hyperlocal Messaging System
+image: images/portfolio/Sigmapoint_Nearbox_Android_iOS_app-480.jpg
+technologies:
+  - iOS
+  - Android
+available:
+  appstore: https://itunes.apple.com/pl/app/nearbox/id598611676?mt=8
+  googleplay: https://play.google.com/store/apps/details?id=pl.sigmapoint.partybeat
+---
+
+Nearbox is a hyperlocal communication app for iPhone, Android and Web that lets
+people communicate through places. You choose a place, send there a message and
+get the response from other people who subscribe this place. It’s like Twitter
+but instead of people you follow the places.

@@ -1,0 +1,10 @@
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
+
+collections:
+  portfolio:
+    output: false

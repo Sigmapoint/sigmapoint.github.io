@@ -1,0 +1,18 @@
+---
+title: ToCoMoje
+subtitle: Mobile Receipt Scanner
+image: images/portfolio/Sigmapoint_ToCoMoje_mobile_receipt_scanner_Android_iOS_app-480.jpg
+technologies:
+  - iOS
+  - Android
+  - Backend
+  - Web
+available:
+  appstore: https://itunes.apple.com/pl/app/nearbox/id598611676?mt=8
+  googleplay: https://play.google.com/store/apps/details?id=pl.sigmapoint.partybeat
+  web: http://tocomoje.pl
+---
+
+ToCoMoje is a mobile receipt scaner that lets you scan and keep your receipts in
+case of return of damaged or faulty goods. Our team was responsible for
+design & development both apps and integration with Stackmob.

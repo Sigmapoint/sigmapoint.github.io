@@ -1,0 +1,11 @@
+---
+title: Sleepcake
+subtitle: Social Clock Alarm
+image: images/portfolio/Sigmapoint_Sleepcake_Android_iOS_app-480.jpg
+technologies:
+  - iOS
+  - Android
+available:
+---
+
+Sleepcake is a new social clock alarm app that aims to redefine the way people wake up by giving them a chance to do it together. Every time the alarm goes off, the app displays number of people waking up with you at the same time and lets you interact with them through the simple feed called “Wake Up Chat”.
