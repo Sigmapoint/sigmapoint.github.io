@@ -3622,7 +3622,7 @@ blockquote.default {
 /* ===================================================== */
 
 .hero {
-	background: url('../images/bg-012.png') no-repeat;
+	background: url('../images/bg-new-01.jpg') no-repeat;
     background-size: 1920px 445px;
 	color: #fff;
 	padding: 40px 0px 50px 0px;
@@ -3654,13 +3654,15 @@ blockquote.default {
 
 .hero-thank-you {
 	height: 100%;
-	background: url('../images/bg_3.jpg') no-repeat;
+	background: url('../images/bg-new-01.jpg') no-repeat;
 	background-size: 100%;
 	color: #fff;
 	padding: 40px 0px 50px 0px;
 }
-@media (-width:1199px) {
-
+@media (max-width:477px) {
+    .hero {
+        background-size: 1920px 575px;
+    }
 }
 
 /* ===================================================== */
