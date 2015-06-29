@@ -3993,7 +3993,6 @@ bottom: -35px;
 .nav_logo {
     width: 120px;
     height: auto;
-    padding-top: 5px !important;
 }
 
 .project {
@@ -4058,4 +4057,14 @@ bottom: -35px;
 #map-canvas {
     width: 100%;
     height: 500px;
+}
+
+.nav_logo.visible-xs {
+    margin-top: 10px;
+    float: left;
+}
+
+.nav_logo.hidden-xs {
+    margin-top: 5px;
+    float: left
 }
