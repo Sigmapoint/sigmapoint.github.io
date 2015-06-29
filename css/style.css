@@ -3622,7 +3622,8 @@ blockquote.default {
 /* ===================================================== */
 
 .hero {
-	background: url('../images/bg_3.jpg') no-repeat;
+	background: url('../images/bg-012.png') no-repeat;
+    background-size: 1920px 445px;
 	color: #fff;
 	padding: 40px 0px 50px 0px;
 	}
