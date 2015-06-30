@@ -143,6 +143,7 @@ a:focus{
 }
 .top-info li:hover a                {color:#fff!important;}
 .top-info li:hover a.my-tweet       {background:#3ABDD1;}
+.top-info li:hover a.my-github      {background:#2BC64B;}
 .top-info li:hover a.my-facebook    {background:#648CD5;}
 .top-info li:hover a.my-skype       {background:#00AFFF;}
 .top-info li:hover a.my-pint        {background:#DE5656;}
@@ -2308,7 +2309,7 @@ blockquote{font-size:14px;}
 	-webkit-border-radius: 50%;
 	-o-border-radius: 50%;
 	-ms-border-radius: 50%;
-	
+
     -webkit-transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
 	-o-transition: all 0.2s linear;
@@ -3238,11 +3239,11 @@ blockquote.default {
 	filter: alpha(opacity=0);
 	color:#fff;
 	cursor: pointer;
-	
+
 	border-radius: 50%;
 	-moz-border-radius: 50%;
-	-webkit-border-radius: 50%;	
-	
+	-webkit-border-radius: 50%;
+
 	transition: all 200ms;
 	-moz-transition: all 200ms;
 	-webkit-transition: all 200ms;
@@ -3324,7 +3325,7 @@ blockquote.default {
     bottom: 0;	right: 0;
     overflow: hidden;
     width:100%;
-} 
+}
 
 .aboutCarousel:hover .carousel-prev { left: 10px; }
 .aboutCarousel:hover .carousel-next { right: 10px; }
