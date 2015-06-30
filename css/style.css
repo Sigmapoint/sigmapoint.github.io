@@ -3622,7 +3622,8 @@ blockquote.default {
 /* ===================================================== */
 
 .hero {
-	background: url('../images/bg_3.jpg') no-repeat;
+	background: url('../images/bg-new-01.jpg') no-repeat;
+    background-size: 1920px 445px;
 	color: #fff;
 	padding: 40px 0px 50px 0px;
 	}
@@ -3653,13 +3654,15 @@ blockquote.default {
 
 .hero-thank-you {
 	height: 100%;
-	background: url('../images/bg_3.jpg') no-repeat;
+	background: url('../images/bg-new-01.jpg') no-repeat;
 	background-size: 100%;
 	color: #fff;
 	padding: 40px 0px 50px 0px;
 }
-@media (-width:1199px) {
-
+@media (max-width:477px) {
+    .hero {
+        background-size: 1920px 575px;
+    }
 }
 
 /* ===================================================== */
@@ -3993,7 +3996,6 @@ bottom: -35px;
 .nav_logo {
     width: 120px;
     height: auto;
-    padding-top: 5px !important;
 }
 
 .project {
@@ -4058,4 +4060,14 @@ bottom: -35px;
 #map-canvas {
     width: 100%;
     height: 500px;
+}
+
+.nav_logo.visible-xs {
+    margin-top: 10px;
+    float: left;
+}
+
+.nav_logo.hidden-xs {
+    margin-top: 5px;
+    float: left
 }
