@@ -5,7 +5,9 @@ hero: "hero/jobs.html"
 <section class="info_service scroll" id="id_services">
 	<div class="container">
 		<div class="row sub_content">
-			<div class="col-md-12 col-lg-12">
+
+            {% if site.jobs == empty %}
+                <div class="col-md-12 col-lg-12">
                     <h2>Currently we have no new job openings...</h2>
                     <h3>
                         ...but feel free to impress us with your awesome skills!
@@ -15,7 +17,42 @@ hero: "hero/jobs.html"
                         If you would like to join us let us know at
                         <a href="mailto:jobs@sigmapoint.pl">jobs@sigmapoint.pl</a>.
                     </p>
-			</div>
+                </div>
+            {% endif %}
+
+            {% if site.jobs.length != empty %}
+                <div class="col-md-12 col-lg-12">
+                    <div class="dividerHeading" >
+                        <h4><span>Currently we're looking for:</span></h4>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="panel-group accordion" id="accordion">
+                            {% for job in site.jobs %}
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <span class="accordian-icon">
+                                                <i class="switch fa fa-plus-circle"></i>
+                                            </span>
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed">
+                                                <b>{{ job.title }}</b>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse" style="height: 0px;">
+                                        <div class="panel-body">
+                                        <p>
+                                            {{ job.excerpt }}
+                                        </p>
+                                        <button class="btn btn-default"><a href="{{ job.url }}" style="color:#fff">Read more »</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
 		</div>
 	</div>
 </section>

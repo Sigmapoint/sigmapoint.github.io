@@ -10,14 +10,14 @@
 
 	<!-- CSS FILES -->
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" data-name="skins">
-    <link rel="stylesheet" href="css/layout/wide.css" data-name="layout">
-    <link rel="stylesheet" href="css/fractionslider.css"/>
-    <link rel="stylesheet" href="css/style-fraction.css"/>
-	<link rel="stylesheet" href="css/animate.css"/>
-    <link rel="stylesheet" type="text/css" href="css/switcher.css" media="screen" />
+    <link rel="stylesheet" href="/css/layout/wide.css" data-name="layout">
+    <link rel="stylesheet" href="/css/fractionslider.css"/>
+    <link rel="stylesheet" href="/css/style-fraction.css"/>
+	<link rel="stylesheet" href="/css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/switcher.css" media="screen" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -26,7 +26,7 @@
     <![endif]-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 
-    <script src="js/custom_post.js"></script>
+    <script src="/js/custom_post.js"></script>
 
 	<!-- FONTS -->
 	<link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
@@ -97,7 +97,9 @@
                                 </li>
 
                                 <li><a href="/#id_contact">Contact</a></li>
-                                <li><a href="/jobs.html">Jobs</a>
+                                {% if site.jobs != empty %}
+                                    <li><a href="/jobs.html">Jobs</a>
+                                {% endif %}
                             </ul>
                         </div>
                     </div>
@@ -186,7 +188,7 @@
 					<div class="widget_title">
 						<h4><span>Contact Us</span></h4>
 					</div>
-					<form method="get" novalidate enctype="multipart/form-data" action="" class="fsForm fsSingleColumn fsMaxCol1" id="fsForm1892401" onsubmit="post_data()">
+					<form id="contactform" method="get" novalidate enctype="multipart/form-data" action="" class="fsForm fsSingleColumn fsMaxCol1" id="fsForm1892401">
 						<input type="hidden" name="form" value="1892401" />
 						<input type="hidden" name="viewkey" value="SY6USJ0HjD" />
 						<input type="hidden" name="hidden_fields" id="hidden_fields1892401" value="" />
@@ -345,6 +347,11 @@ $(document).ready(function(){
         });
     });
 	});
+
+    $('#contactform').on('submit', function (e) {
+        e.preventDefault();
+        post_data();
+    });
 
 </script>
 <script>

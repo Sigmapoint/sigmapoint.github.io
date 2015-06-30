@@ -8,3 +8,5 @@ defaults:
 collections:
   portfolio:
     output: false
+  jobs:
+    output: false
