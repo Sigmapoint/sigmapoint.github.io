@@ -2,8 +2,24 @@ Requirements
 ------------
 
 We're building sigmapoint.pl using jekyll so you will at least need ruby
-to build/run it. If you're on windows just get ruby and get to the next
-`Getting Bundler` section.
+to build/run it.
+
+If you're on Windows get ruby and ruby DevKit - be sure you use proper versions.
+Probably you need to add environmental variable for 'ruby' command manually or
+you have to use absolute path to run it.
+
+After you install both ruby and ruby DevKit, add a path to your ruby to config.yml file
+(located where you have installed ruby) like this (dash is necessary):
+
+    - C:/path/to/ruby
+
+Then in location where you extracted ruby DevKit run:
+
+    $ ruby dk.rb init
+    $ ruby dk.rb install
+
+Now you can go to 'Getting Bundler' section.
+
 
 If on OSX or Linux get yourself rvm by following these instructions
 https://rvm.io/ (on osx you need Homebrew before you install rvm).
