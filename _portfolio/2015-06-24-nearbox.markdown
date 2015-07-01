@@ -7,7 +7,7 @@ technologies:
   - Android
 available:
   appstore: https://itunes.apple.com/pl/app/nearbox/id598611676?mt=8
-  googleplay: https://play.google.com/store/apps/details?id=pl.sigmapoint.partybeat
+  googleplay: https://play.google.com/store/apps/details?id=co.sigmapoint.nearbox&hl=pl
 ---
 
 Nearbox is a hyperlocal communication app for iPhone, Android and Web that lets

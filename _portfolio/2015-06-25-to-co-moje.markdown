@@ -8,8 +8,8 @@ technologies:
   - Backend
   - Web
 available:
-  appstore: https://itunes.apple.com/pl/app/nearbox/id598611676?mt=8
-  googleplay: https://play.google.com/store/apps/details?id=pl.sigmapoint.partybeat
+  appstore: https://itunes.apple.com/pl/app/tocomoje-przechowuj-swoje/id737297067?mt=8
+  googleplay: https://play.google.com/store/apps/details?id=pl.tocomoje&hl=pl
   web: http://tocomoje.pl
 ---
 
