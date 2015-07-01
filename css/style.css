@@ -262,9 +262,10 @@ a:focus{
 }
 .navbar{
     margin-bottom: 0;
-    background:#323A45;
+    background: #332F2E;
     height:70px;
-    border:none;
+    border: none;
+    box-shadow: 0 2px 10px black;
 }
 
 .navbar > .container > .row > .col-md-12 > .navbar-collapse.collapse > .nav > li > a{
@@ -348,8 +349,8 @@ a:focus{
     border-left:7px dashed transparent;
 }
 .navbar-nav{
-    border-right: 1px solid #19222d;
-    border-left: 1px solid #425166;
+    border-right: 1px solid #25211f;
+    border-left: 1px solid #4c4847;
 }
 .navbar-nav span.scroll-down-arrow {
     top:6px;
@@ -366,8 +367,8 @@ a:focus{
     line-height:15px;
 }
 .navbar-default .navbar-nav > li{
-    border-left: 1px solid #19222d;
-    border-right: 1px solid #425166;
+    border-left: 1px solid #25211f;
+    border-right: 1px solid #4c4847;
 }
 .navbar-default .navbar-nav > li > a{
     padding:14px 25px;
@@ -457,12 +458,12 @@ ul.sm li *,ul.sm li *:before,ul.sm li *:after{-moz-box-sizing:content-box;-webki
 /* 4. FOOTER & FOOTER WIDGETS												 */
 /* ===================================================== */
 .footer_bottom{
-    background:#292F38;
+    background:#25211f;
     padding:20px 0;
     color:#fff;
 }
 .footer{
-    background:#323A45;
+    background:#332F2E;
     padding:150px 0;
     position: relative;
     color:#fff;
@@ -3169,7 +3170,7 @@ ul.recent_tab_list li
 {
     color:#fff;
     padding:0;
-    background:#323A45;
+    background:#332F2E;
 }
 
 /* ===================================================== */
@@ -3618,7 +3619,7 @@ blockquote.default {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #34495e;
+    background-color: #1f1b19;
     border-radius: 2px;
     text-align: center;
     line-height: 40px;
@@ -3742,7 +3743,7 @@ blockquote.default {
 
     #logo{margin:0;width:78px;}
 
-    .navbar > .container > .row > .col-md-12 > .navbar-collapse.collapse > .nav > li > a{padding:29px 14px !important;}
+    .navbar > .container > .row > .col-md-12 > .navbar-collapse.collapse > .nav > li > a{padding:27px 14px !important;}
 
     .recent-item h5{margin-top:20px; }
 
