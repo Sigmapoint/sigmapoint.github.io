@@ -3659,15 +3659,17 @@ blockquote.default {
 
 .hero h1 {
 	color: #fff;
-	font-weight: 600;
+	font-weight: 500;
 	line-height: 1.4;
+    margin-bottom: 40px;
+    font-size: 36px;
 }
 
 .hero h2 {
 	color: #fff;
-	line-height: 1.4;
-	font-size: 14px;
-    font-weight: 500;
+	line-height: 1.8;
+	font-size: 16px;
+    font-weight: 300;
 }
 
 .hero h3 {
@@ -3678,7 +3680,7 @@ blockquote.default {
 }
 
 .hero-copy {
-	margin: 20px 0;
+	margin: 60px 0;
 }
 
 .hero-thank-you {
