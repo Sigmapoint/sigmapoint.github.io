@@ -3641,7 +3641,7 @@ blockquote.default {
     display: inline-block;
     vertical-align: middle;
     font: 20px 'FontAwesome';
-    color: #b8bcc0;
+    color: #fff;
 }
 .btntoTop.active {
     opacity: 1;
