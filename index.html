@@ -2,61 +2,6 @@
 hero: "hero/default.html"
 ---
 
-<!--Start recent work-->
-<div class="container portfolio" id="id_portfolio">
-	<div class="row">
-		<div class="dividerHeading">
-			<h4><span>Recent projects</span></h4>
-		</div>
-		<div id="carousel-example-generic" class="carousel slide" style="min-height: 400px" data-ride="carousel">
-			<ol class="carousel-indicators">
-				{% for item in site.portfolio %}
-				{% if forloop.first %}
-				<li data-target="#carousel-example-generic" data-slide-to="{{ forloop.index0 }}" class="active"></li>
-				{% else %}
-				<li data-target="#carousel-example-generic" data-slide-to="{{ forloop.index0 }}"></li>
-				{% endif %}
-				{% endfor %}
-			</ol>
-			<div class="carousel-inner" role="listbox">
-				{% for item in site.portfolio %}
-				<div class="item active">
-					<div class="col-md-6">
-						<img src="{{ item.image }}" class="img-responsive">
-					</div>
-					<div class="col-md-6">
-						<h2>{{ item.title }}</h2>
-						<h4>{{ item.subtitle }}</h4>
-						{% if item.available.appstore %}
-						<a target="_blank" href="{{ item.available.appstore }}">
-							<img class="available_on" alt="iOS app on App Store" src="images/badges/app_store.svg" />
-						</a>
-						{% endif %}
-						{% if item.available.googleplay %}
-						<a target="_blank" href="{{ item.available.googleplay }}">
-							<img class="available_on" alt="iOS app on Web" src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png">
-						</a>
-						{% endif %}
-						{% if item.available.web %}
-						<a target="_blank" href="{{ item.available.web }}">
-							<img class="available_on" alt="iOS app on Web" src="images/badges/app_web.svg">
-						</a>
-						{% endif %}
-						<h3>
-							{% for tech in item.technologies %}
-							{{ tech }} {% unless forloop.last %}<span>/</span>{% endunless %}
-							{% endfor %}
-						</h3>
-						{{ item.content }}
-					</div>
-				</div>
-				{% endfor %}
-			</div>
-		</div>
-	</div>
-</div>
-<!--END recent work-->
-
 <!--start info service-->
 <section class="info_service scroll" id="id_services">
 	<div class="container">
@@ -156,6 +101,60 @@ hero: "hero/default.html"
 </section>
 <!--end info service-->
 
+<!--Start recent work-->
+<div class="container portfolio" id="id_portfolio">
+	<div class="row">
+		<div class="dividerHeading">
+			<h4><span>Recent projects</span></h4>
+		</div>
+		<div id="carousel-example-generic" class="carousel slide" style="min-height: 400px" data-ride="carousel">
+			<ol class="carousel-indicators">
+				{% for item in site.portfolio %}
+				{% if forloop.first %}
+				<li data-target="#carousel-example-generic" data-slide-to="{{ forloop.index0 }}" class="active"></li>
+				{% else %}
+				<li data-target="#carousel-example-generic" data-slide-to="{{ forloop.index0 }}"></li>
+				{% endif %}
+				{% endfor %}
+			</ol>
+			<div class="carousel-inner" role="listbox">
+				{% for item in site.portfolio %}
+				<div class="item active">
+					<div class="col-md-6">
+						<img src="{{ item.image }}" class="img-responsive">
+					</div>
+					<div class="col-md-6">
+						<h2>{{ item.title }}</h2>
+						<h4>{{ item.subtitle }}</h4>
+						{% if item.available.appstore %}
+						<a target="_blank" href="{{ item.available.appstore }}">
+							<img class="available_on" alt="iOS app on App Store" src="images/badges/app_store.svg" />
+						</a>
+						{% endif %}
+						{% if item.available.googleplay %}
+						<a target="_blank" href="{{ item.available.googleplay }}">
+							<img class="available_on" alt="iOS app on Web" src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png">
+						</a>
+						{% endif %}
+						{% if item.available.web %}
+						<a target="_blank" href="{{ item.available.web }}">
+							<img class="available_on" alt="iOS app on Web" src="images/badges/app_web.svg">
+						</a>
+						{% endif %}
+						<h3>
+							{% for tech in item.technologies %}
+							{{ tech }} {% unless forloop.last %}<span>/</span>{% endunless %}
+							{% endfor %}
+						</h3>
+						{{ item.content }}
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+<!--END recent work-->
 
 <section class="content service scroll" id="id_technology">
 	<div class="container">
