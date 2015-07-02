@@ -3699,7 +3699,7 @@ blockquote.default {
 	color: #fff;
 	padding: 40px 0px 50px 0px;
 }
-@media (max-width:512px) {
+@media (max-width: 512px) {
     .hero {
         height: 550px;
     }
@@ -3712,9 +3712,6 @@ blockquote.default {
     }
     .hero-copy h2 {
         font-size: 14px;
-    }
-    .footer .col-sm-6 {
-        padding: 0 15px !important;
     }
 }
 
@@ -3824,6 +3821,9 @@ blockquote.default {
 
     .footer {
         padding: 50px 0;
+    }
+    .footer .col-sm-6 {
+        padding: 0 15px !important;
     }
 }
 
