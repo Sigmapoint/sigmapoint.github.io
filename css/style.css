@@ -3797,6 +3797,9 @@ blockquote.default {
     .hero-copy {
         margin-left: 40px;
     }
+    .contact-details-alt a {
+        font-size: 1.1em;
+    }
 }
 
 @media only screen and (max-width:768px) {
@@ -3818,6 +3821,10 @@ blockquote.default {
     .blog_medium .post_content{ width:45%; }
 
     .shares li.shareslabel h3{ padding:8px 14px; }
+
+    .footer {
+        padding: 50px 0;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -4100,13 +4107,13 @@ bottom: -35px;
 .label-default {
     background-color: rgb(205, 76, 60);
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .label-default-tech {
     background-color: rgb(240, 76, 60);
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .label-default a, .label-default-tech a {
