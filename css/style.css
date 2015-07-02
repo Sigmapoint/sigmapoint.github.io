@@ -3841,7 +3841,7 @@ blockquote.default {
         box-shadow: 0 0 10px #9c9999;
     }
     .navbar-nav{
-        background:#303436;
+        background: rgb(63,63,63);
         margin: 0;
     }
     .navbar-collapse{
@@ -3853,7 +3853,7 @@ blockquote.default {
     {
         padding-top:12px!important;
         padding-bottom:12px!important;
-        border-top:1px solid #464c4f!important;
+        border-top:1px solid rgb(80,80,80)!important;
         border-bottom:none!important;
     }
     .navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header,
