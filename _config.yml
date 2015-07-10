@@ -10,3 +10,5 @@ collections:
     output: false
   jobs:
     output: false
+  testimonials:
+    output: false

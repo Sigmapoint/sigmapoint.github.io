@@ -31,7 +31,7 @@ function post_data(){
 
     document.getElementById(submit_button_id).disabled = false
 
-    window.location.href = "thank-you.html"
+    window.location.href = "../thank-you/thank-you.html"
 
     console.log("Done")
 }

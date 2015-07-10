@@ -265,6 +265,238 @@
 
 
         /* ------------------ End Document ------------------ */
+
+
+        /* TESTIMONIALS */
+        var animationTime = {
+            fadeIn: 2000,
+            fadeOut: 1000,
+            pause: 8000
+        };
+
+        //from stackoverflow
+        function Timer(callback, delay) {
+            var timerId, start, remaining = delay;
+
+            this.pause = function() {
+                window.clearTimeout(timerId);
+                remaining -= new Date() - start;
+            };
+
+            this.resume = function() {
+                start = new Date();
+                window.clearTimeout(timerId);
+                timerId = window.setTimeout(callback, remaining);
+            };
+
+            this.resume();
+        }
+
+        var testimonials = $('.testimonial').length;
+
+        var timer;
+
+        var anim = function(element) {
+            $('.testimonial' + element).animate({
+                opacity: 1
+            }, animationTime.fadeIn, function() {
+                timer = new Timer(function() {
+                    $('.testimonial' + element).animate({
+                        opacity: 0
+                    }, animationTime.fadeOut, function() {
+                        anim((element === testimonials ? 1 : element + 1));
+                    });
+                },animationTime.pause);
+            });
+        };
+
+        //pause and resume animation on hover
+        $('.testimonial').hover(function() {
+            if (timer) {
+                timer.pause()
+            }
+        }, function() {
+            if (timer) {
+                timer.resume();
+            }
+        });
+
+        //initialization
+        if (testimonials > 1) {
+            anim(1);
+        }
+        else {
+            $('section.testimonials').css('display', 'none');
+        }
+
+
+        /* PROCESS */
+        var descriptions = [
+            {step: 1, title: "Your idea", content: 'Our representative and expert meet with you to talk through your ' +
+            'idea, discuss user stories and create first image of potential product. On this stage we will advise you ' +
+            'what is best possible set of features in terms of current mobile standards and how to prioritize them, ' +
+            'which system versions your application should support etc.'},
+
+            {step: 2, title: 'Product preparation & advisement', content: 'Now it\'s time for us to make even more ' +
+            'effort to prepare solid and reliable vision of your future application. We have intensive brainstorms ' +
+            'about product design and user experience.'},
+
+            {step: 3, title: 'Closing the deal', content: 'At this point it\'s really close to transform an idea to an ' +
+            'ongoing project. After approval of all documents from both sides we are ready to start engineering and ' +
+            'make you happy!'},
+
+            {step: 4, title: 'UI', content: 'If you dont have graphic mockups or you don\'t know how to handle UI, we ' +
+            'will do it for you. Before we accede to development process, we have to transform previous models into ' +
+            'pixel perfect visualizations. At this stage we translate user stories into clear and efficient user ' +
+            'interface keeping UX on a high level.'},
+
+            {step: 5, title: 'Development in Scrum', content: 'Now it\'s the time for development part of engineering. ' +
+            'We work in Scrum methodology to hold on to effective management of a whole project. All starts with a ' +
+            'Product Backlog and all tasks are systematically implemented durgin two-weeks Sprints. After every Sprint ' +
+            'you\'re able to monitor current progress of our work, therefore this approach gives you constanius update ' +
+            'on current stage of the project.'},
+
+            {step: 6, title: 'Heavy QA', content: 'After coding we perform heavy QA tests on different devices ' +
+            '(smartphones and tablets), screen sizes and densities to make sure that developed application is ready to ' +
+            'be used by wide range of users.'},
+
+            {step: 7, title: 'Deployment', content: 'In this part we release you application to App Store or provide ' +
+            'executable file to you. Also, we prepare documentation, so implementing potential future features will be ' +
+            'piece of cake.'},
+
+            {step: 8, title: 'Customer Support', content: 'We provide support of created product on many levels. ' +
+            'Starting from basic things like answering questions, through making changes, to implementing new features ' +
+            'requested by you.'}
+        ];
+        var activeStep = 1;
+        var activeStepSmall = 1;
+        var description = $('#process-description');
+        var title = description.find('h3');
+        var content = description.find('p');
+
+        var descriptionSmall = $('#process-description-small');
+        var titleSmall = descriptionSmall.find('h3');
+        var contentSmall = descriptionSmall.find('p');
+
+        $('.inactive-first').css('opacity','0.2');
+        title.text( descriptions[activeStep - 1].step + '. ' + descriptions[activeStep - 1].title );
+        titleSmall.text( descriptions[activeStep - 1].step + '. ' + descriptions[activeStep - 1].title );
+        content.text( descriptions[activeStep - 1].content );
+        contentSmall.text( descriptions[activeStep - 1].content );
+
+        var settings = {
+            active: 1,
+            preActive: 0.3,
+            inactive: 0.2,
+            duration: 600
+        };
+
+        var setActiveStep = function(index) {
+            var tempActiveStep = activeStep;
+            if (index !== activeStep) {
+                $('#step-' + index).fadeTo(settings.duration, settings.active);
+                if (index - 1 > 0) {
+                    $('#step-' + ( index - 1 )).fadeTo(settings.duration, settings.preActive);
+                }
+                for ( var i = 1; i <= 8; i++ ) {
+                    if(i !== Number(index) && i !== (index - 1)) {
+                        $('#step-' + i).fadeTo(settings.duration, settings.inactive);
+                    }
+                }
+                description.fadeOut(settings.duration/2, function() {
+                    title.text( descriptions[index-1].step + '. ' + descriptions[index-1].title );
+                    content.text( descriptions[index-1].content );
+                    description.fadeIn(settings.duration/2);
+                });
+                activeStep = index;
+                $('#nav-' + tempActiveStep).removeClass('active');
+                $('#nav-' + activeStep).addClass('active');
+            }
+        };
+
+        var windowHeight = $(window).height();
+        var setActiveStepSmall = function() {
+            if ($('.circle').length) {
+                var position = $(document).scrollTop(),
+                    tempActiveStep = activeStepSmall;
+                clearAnimation('circle');
+                for (var i = 1; i <= 8; i++) {
+                    if ($('#circle-' + i).offset().top < position + windowHeight / 2) {
+                        $('#circle-' + i).fadeTo(settings.duration, settings.active);
+                        activeStepSmall = i;
+                    }
+                    else if (i !== 1) {
+                        $('#circle-' + i).fadeTo(settings.duration, settings.inactive);
+                    }
+                }
+                if (activeStepSmall !== tempActiveStep) {
+                    descriptionSmall.fadeOut(settings.duration / 2, function () {
+                        titleSmall.text(descriptions[activeStepSmall - 1].step + '. ' + descriptions[activeStepSmall - 1].title);
+                        contentSmall.text(descriptions[activeStepSmall - 1].content);
+                        var translate = $(window).width() < 768 ? (activeStepSmall - 1) * 90 - 30 : (activeStepSmall - 1) * 110;
+                        if (activeStepSmall === 5) {
+                            translate -= 20;
+                        }
+                        descriptionSmall.css('transform', 'translateY(' + translate + 'px)');
+                        descriptionSmall.fadeIn(settings.duration / 2);
+                    });
+                }
+            }
+        };
+
+        var clearAnimation = function(element) {
+            for ( var i = 1; i <= 8; i++ ) {
+                $('#' + element + '-' + i).finish();
+            }
+            description.finish();
+            descriptionSmall.finish();
+        };
+
+        var forward = function() {
+            if(activeStep === 8) {
+                $('#range').val(1);
+                setActiveStep(1);
+            }
+            else {
+                $('#range').val((Number(activeStep) + 1) * 10);
+                setActiveStep(Number(activeStep) + 1);
+            }
+        };
+
+        var backward = function() {
+            if(activeStep === 1) {
+                return false;
+            }
+            else {
+                $('#range').val((Number(activeStep) - 1) * 10);
+                setActiveStep(Number(activeStep) - 1);
+            }
+        };
+
+        $(document).keydown(function(e) {
+            if(e.keyCode === 37) {
+                clearAnimation('step');
+                backward();
+            }
+            else if (e.keyCode === 39) {
+                clearAnimation('step');
+                forward();
+            }
+
+        });
+
+        $('.nav').click(function() {
+            setActiveStep( Number($(this).text()) );
+        });
+
+        $('.step').click(function() {
+            setActiveStep( $(this).attr('id').substr(5,1) );
+        });
+
+        $(window).on('scroll', function() {
+            setActiveStepSmall();
+        });
+
     });
 })(this.jQuery);
 
@@ -318,7 +550,6 @@ $(document).ready(function() {
     }catch(e){
 
     }
-
 
     /*============
      BUTTON UP
