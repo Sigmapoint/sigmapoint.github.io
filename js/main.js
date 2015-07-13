@@ -266,6 +266,14 @@
 
         /* ------------------ End Document ------------------ */
 
+        /* PORTFOLIO */
+        $('.portfolio').hammer().bind('swipeleft', function() {
+            $('#carousel-example-generic').carousel('next');
+        });
+        $('.portfolio').hammer().bind('swiperight', function() {
+            $('#carousel-example-generic').carousel('prev');
+            return false;
+        });
 
         /* TESTIMONIALS */
         var animationTime = {
