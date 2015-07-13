@@ -297,25 +297,21 @@
         var timer;
 
         var anim = function(element) {
-            $('.testimonial' + element).animate({
-                opacity: 1
-            }, animationTime.fadeIn, function() {
-                timer = new Timer(function() {
-                    $('.testimonial' + element).animate({
-                        opacity: 0
-                    }, animationTime.fadeOut, function() {
-                        anim((element === testimonials ? 1 : element + 1));
-                    });
-                },animationTime.pause);
-            });
+            $('.testimonial' + element).addClass('active');
+            timer = new Timer(function() {
+                $('.testimonial' + element).removeClass('active');
+                anim((element === testimonials ? 1 : element + 1));
+            }, animationTime.pause);
         };
 
         //pause and resume animation on hover
         $('.testimonial').hover(function() {
+            console.log('pause');
             if (timer) {
                 timer.pause()
             }
         }, function() {
+            console.log('resume');
             if (timer) {
                 timer.resume();
             }

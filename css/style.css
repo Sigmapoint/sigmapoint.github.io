@@ -4228,7 +4228,12 @@ bottom: -35px;
     width: 100%;
     background-color: rgba(0,0,0,.3);
     border-radius: 15px;
+    transition: 1s opacity linear;
+}
 
+.testimonial.active {
+    opacity: 1;
+    transition: 1s opacity linear;
 }
 
 .testimonials .face {
