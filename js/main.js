@@ -314,12 +314,10 @@
 
         //pause and resume animation on hover
         $('.testimonial').hover(function() {
-            console.log('pause');
             if (timer) {
                 timer.pause()
             }
         }, function() {
-            console.log('resume');
             if (timer) {
                 timer.resume();
             }
