@@ -1,0 +1,11 @@
+---
+title: Quicklii
+subtitle: Auction app
+image: images/portfolio/Sigmapoint_Quicklii_iOS_app.jpg
+technologies:
+  - iOS
+available:
+  appstore: itms://itunes.apple.com/us/app/apple-store/id998859909?mt=8
+---
+
+The easiest way to buy and sell stuff locally.
