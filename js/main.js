@@ -354,7 +354,7 @@
 
             {step: 5, title: 'Development in Scrum', content: 'Now it\'s the time for development part of engineering. ' +
             'We work in Scrum methodology to hold on to effective management of a whole project. All starts with a ' +
-            'Product Backlog and all tasks are systematically implemented durgin two-weeks Sprints. After every Sprint ' +
+            'Product Backlog and all tasks are systematically implemented during two-weeks Sprints. After every Sprint ' +
             'you\'re able to monitor current progress of our work, therefore this approach gives you constanius update ' +
             'on current stage of the project.'},
 
@@ -362,7 +362,7 @@
             '(smartphones and tablets), screen sizes and densities to make sure that developed application is ready to ' +
             'be used by wide range of users.'},
 
-            {step: 7, title: 'Deployment', content: 'In this part we release you application to App Store or provide ' +
+            {step: 7, title: 'Deployment', content: 'In this part we release you application to Google Play, App Store or provide ' +
             'executable file to you. Also, we prepare documentation, so implementing potential future features will be ' +
             'piece of cake.'},
 
