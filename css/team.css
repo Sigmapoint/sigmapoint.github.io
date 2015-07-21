@@ -1,0 +1,319 @@
+.team {
+    height: 1200px;
+}
+
+.team .center {
+    background: url('../images/team/center.png') 0 0 no-repeat;
+    width: 35.2%;
+    height: 500px;
+    background-size: 100%;
+    margin: 350px auto;
+}
+
+.team .people {
+    position: relative;
+}
+
+.person {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #E74C3C;
+    color: #000000;
+    background-color: #fff;
+    z-index: 5;
+}
+
+.line {
+    position: absolute;
+    background-size: 100% !important;
+}
+
+.line.ag {
+    background: url('../images/team/AG.png') 0 0 no-repeat;
+    width: 17.09%;
+    height: 200px;
+    top: 177px;
+    left: calc(25% + 2px);
+}
+
+.person.ag {
+    top: 100px;
+    left: calc(12% + 4px);
+}
+
+.line.ks {
+    background: url('../images/team/KS.png') 0 0 no-repeat;
+    width: 7.48%;
+    height: 200px;
+    top: 203px;
+    left: calc(43% + 2px);
+}
+
+.person.ks {
+    top: 53px;
+    left: 37%;
+}
+
+.line.mp {
+    background: url('../images/team/MP.png') 0 0 no-repeat;
+    width: 17.09%;
+    height: 200px;
+    top: 203px;
+    left: calc(52% + 6px);
+}
+
+.person.mp {
+    top: 53px;
+    left: calc(63% + 1px);
+}
+
+.line.kb.ceo {
+    background: url('../images/team/KB_ceo.png') 0 0 no-repeat;
+    width: 22.43%;
+    height: 200px;
+    top: 251px;
+    left: calc(55% - 5px);
+}
+
+.line.kb.ios {
+    background: url('../images/team/KB_ios.png') 0 0 no-repeat;
+    width: 16.02%;
+    height: 200px;
+    top: 322px;
+    left: 67%;
+}
+
+.person.kb {
+    top: 177px;
+    left: calc(76% + 4px);
+}
+
+.line.kt {
+    background: url('../images/team/KT.png') 0 0 no-repeat;
+    width: 19.23%;
+    height: 10px;
+    top: 483px;
+    left: 67%;
+}
+
+.person.kt {
+    top: 405px;
+    left: calc(86% + 1px);
+}
+
+.line.kd.ios {
+    background: url('../images/team/KD_ios.png') 0 0 no-repeat;
+    width: 16.02%;
+    height: 200px;
+    top: 507px;
+    left: 67%;
+}
+
+.line.kd.android {
+    background: url('../images/team/KD_android.png') 0 0 no-repeat;
+    width: 21.37%;
+    height: 200px;
+    top: 579px;
+    left: calc(62% - 4px);
+}
+
+.person.kd {
+    top: 592px;
+    left: calc(76% + 7px);
+}
+
+.line.jp {
+    background: url('../images/team/JP.png') 0 0 no-repeat;
+    width: 22.44%;
+    height: 200px;
+    top: 665px;
+    left: calc(58% - 3px);
+}
+
+.person.jp {
+    top: 827px;
+    left: calc(74% - 2px);
+}
+
+.line.pz {
+    background: url('../images/team/PZ.png') 0 0 no-repeat;
+    width: 5.34%;
+    height: 200px;
+    top: 665px;
+    left: calc(52% + 6px);
+}
+
+.person.pz {
+    top: 845px;
+    left: calc(51% + 6px);
+}
+
+.line.pb.android {
+    background: url('../images/team/PB_android.png') 0 0 no-repeat;
+    width: 16.02%;
+    height: 270px;
+    top: 665px;
+    left: calc(40% - 1px);
+}
+
+.line.pb.windows {
+    background: url('../images/team/PB_windows.png') 0 0 no-repeat;
+    width: 8.55%;
+    height: 200px;
+    top: 665px;
+    left: calc(34% - 3px);
+}
+
+.person.pb {
+    top: 849px;
+    left: calc(27% + 3px);
+}
+
+.line.kman {
+    background: url('../images/team/KMan.png') 0 0 no-repeat;
+    width: 16.02%;
+    height: 230px;
+    top: 579px;
+    left: calc(17% - 2px);
+}
+
+.person.kman {
+    top: 791px;
+    left: calc(10% + 6px);
+}
+
+.line.km.front {
+    background: url('../images/team/KM_front.png') 0 0 no-repeat;
+    width: 20.3%;
+    height: 200px;
+    top: 531px;
+    left: calc(13% - 4px);
+}
+
+.line.km.back {
+    background: url('../images/team/KM_back.png') 0 0 no-repeat;
+    width: 13.89%;
+    height: 200px;
+    top: 470px;
+    left: calc(19% + 1px);
+}
+
+.person.km {
+    top: 493px;
+    left: calc(6% + 6px);
+}
+
+.line.gs {
+    background: url('../images/team/GS.png') 0 0 no-repeat;
+    width: 13.89%;
+    height: 200px;
+    top: 360px;
+    left: calc(19% + 1px);
+}
+
+.person.gs {
+    top: 282px;
+    left: calc(6% + 6px);
+}
+
+.stitch {
+    position: absolute;
+    background-color: rgb(85,85,85);
+}
+
+.stitch.description {
+    background-color: rgba(0,0,0,0);
+    width: 200px !important;
+}
+
+.stitch.business {
+    width: 25px;
+    height: 25px;
+    top: 275px;
+    left: calc(41% + 1px);
+}
+
+.description.business {
+    top: 266px;
+    left: 23%;
+    text-align: right;
+}
+
+.stitch.ceo {
+    width: 75px;
+    height: 25px;
+    top: 275px;
+    left: calc(49% + 4px);
+}
+
+.description.ceo {
+    top: 275px;
+    left: 57%;
+}
+
+.stitch.ios {
+    width: 25px;
+    height: 75px;
+    top: 446px;
+    left: calc(71% + 4px);
+}
+
+.description.ios {
+    top: 420px;
+}
+
+.stitch.android {
+    width: 100px;
+    height: 25px;
+    top: 740px;
+    left: calc(54% + 6px);
+}
+
+.description.android {
+    top: 732px;
+    left: 64%;
+}
+
+.stitch.windows {
+    width: 25px;
+    height: 25px;
+    top: 740px;
+    left: calc(41% + 2px);
+}
+
+.description.windows {
+    top: 732px;
+    left: 23%;
+    text-align: right;
+}
+
+.stitch.front {
+    width: 50px;
+    height: 25px;
+    top: 600px;
+    left: calc(23% + 3px);
+}
+
+.description.front {
+    top: 590px;
+    left: 28%;
+}
+
+.stitch.back {
+    width: 25px;
+    height: 50px;
+    top: 435px;
+    left: 26%;
+}
+
+.description.back {
+    top: 395px;
+    left: 11%;
+    text-align: right;
+}
+
+@media only screen and (max-width: 1200px) {
+
+}
