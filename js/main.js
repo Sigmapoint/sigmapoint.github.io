@@ -499,6 +499,43 @@
             setActiveStepSmall();
         });
 
+        /* TEAM */
+        var inactive = 0.3;
+
+        var fade = function(element) {
+            var initials = element.substr(0,3);
+            console.log(initials);
+            $(element).hover(function() {
+                $(initials).animate({
+                    opacity: 1,
+                    filter: 'grayscale(100%)'
+                })
+            }, function() {
+                $(initials).fadeTo(500, inactive);
+            });
+        };
+
+        $('.person').fadeTo(0, inactive);
+        $('.line').fadeTo(0, inactive);
+
+        fade('.ag.person');
+        fade('.ks.person');
+        fade('.mp.person');
+        fade('.kb.person');
+        //fade('.kt');
+        $('.kt').fadeTo(0,0);
+        fade('.kd.person');
+        fade('.jp.person');
+        fade('.pz.person');
+        fade('.pb.person');
+        fade('.km.person');
+        fade('.gs.person');
+
+        $('.kman.person').hover(function() {
+            $('.kman').fadeTo(500, 1);
+        }, function() {
+            $('.kman').fadeTo(500, inactive);
+        });
     });
 })(this.jQuery);
 

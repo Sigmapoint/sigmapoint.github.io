@@ -19,7 +19,7 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 1px solid #E74C3C;
+    border: 2px solid #E74C3C;
     color: #000000;
     background-color: #fff;
     z-index: 5;
@@ -312,4 +312,8 @@
     top: 395px;
     left: 11%;
     text-align: right;
+}
+
+@media only screen and (max-width: 1200px) {
+
 }
