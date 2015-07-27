@@ -12,6 +12,16 @@ function handle_post_data(data){
     console.log("Done")
 }
 
+function isValidEmail(email) {
+    var re = /^[^@]+@[^@]+$/;
+
+    if(re.exec(email)){
+        return true;
+    }
+
+    return false;
+}
+
 function post_data(){
     var email_field_id = "field29185149"
     var message_field_id = "field29185136"
@@ -25,13 +35,16 @@ function post_data(){
         'Message': message,
     }
 
-    document.getElementById(submit_button_id).disabled = true
+    if(message && message.length > 0 && isValidEmail(email)) {
 
-    handle_post_data(data)
+        document.getElementById(submit_button_id).disabled = true
 
-    document.getElementById(submit_button_id).disabled = false
+        handle_post_data(data)
 
-    window.location.href = "/thank-you/"
+        document.getElementById(submit_button_id).disabled = false
 
-    console.log("Done")
+        window.location.href = "/thank-you/"
+
+        console.log("Done")
+    }
 }
