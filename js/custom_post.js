@@ -1,19 +1,19 @@
 
-function handle_post_data(data){
-    var automail_url = "https://arcane-hollows-9396.herokuapp.com/sigma"
-
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", automail_url, false);
-    xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-
-    // send the collected data as JSON
-    xhr.send(JSON.stringify(data));
-
-    console.log("Done")
-}
+//function handle_post_data(data){
+//    var automail_url = "https://arcane-hollows-9396.herokuapp.com/sigma"
+//
+//    var xhr = new XMLHttpRequest();
+//    xhr.open("POST", automail_url, false);
+//    xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+//
+//    // send the collected data as JSON
+//    xhr.send(JSON.stringify(data));
+//
+//    console.log("Done");
+//}
 
 function isValidEmail(email) {
-    var re = /^[^@]+@[^@]+$/;
+    var re = /^[^@]+@[^@]+$/;  // same string used as pattern in _layouts/page.html
 
     if(re.exec(email)){
         return true;
@@ -37,14 +37,25 @@ function post_data(){
 
     if(message && message.length > 0 && isValidEmail(email)) {
 
-        document.getElementById(submit_button_id).disabled = true
+        var submit_button = document.getElementById(submit_button_id);
+        submit_button.disabled = true
+        var submit_button_old_value = submit_button.value;
+        submit_button.value = 'Sending...';
 
-        handle_post_data(data)
+        var automail_url = "https://arcane-hollows-9396.herokuapp.com/sigma"
 
-        document.getElementById(submit_button_id).disabled = false
+        $.ajax(automail_url, {
+            data : JSON.stringify(data),
+            contentType : 'application/json',
+            type : 'POST',
+            success: function () {
+                submit_button.disabled = false;
+                submit_button.value = submit_button_old_value;
 
-        window.location.href = "/thank-you/"
+                window.location.href = "/thank-you/"
 
-        console.log("Done")
+                console.log("Done")
+            },
+        });
     }
 }
