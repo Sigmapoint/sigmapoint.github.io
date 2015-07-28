@@ -300,11 +300,17 @@ $(document).ready(function(){
 
     $('#contactform').on('submit', function (e) {
         e.preventDefault();
-        post_data();
+//        post_data();
+		console.log('on submit');
     });
 
     $.validate({
 		modules : 'html5',
+		onSuccess: function() {
+			console.log('on success');
+			post_data();
+			return true;
+		}
 	});
 
 </script>

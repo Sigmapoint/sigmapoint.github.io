@@ -23,12 +23,12 @@ function isValidEmail(email) {
 }
 
 function post_data(){
-    var email_field_id = "field29185149"
-    var message_field_id = "field29185136"
-    var submit_button_id = "fsSubmitButton1892401"
+    var email_field_id = "field29185149";
+    var message_field_id = "field29185136";
+    var submit_button_id = "fsSubmitButton1892401";
 
-    var email = document.getElementById(email_field_id).value
-    var message = document.getElementById(message_field_id).value
+    var email = document.getElementById(email_field_id).value;
+    var message = document.getElementById(message_field_id).value;
 
     var data = {
         'E-Mail': email,
@@ -38,11 +38,11 @@ function post_data(){
     if(message && message.length > 0 && isValidEmail(email)) {
 
         var submit_button = document.getElementById(submit_button_id);
-        submit_button.disabled = true
+        submit_button.disabled = true;
         var submit_button_old_value = submit_button.value;
         submit_button.value = 'Sending...';
 
-        var automail_url = "https://arcane-hollows-9396.herokuapp.com/sigma"
+        var automail_url = "https://arcane-hollows-9396.herokuapp.com/sigma";
 
         $.ajax(automail_url, {
             data : JSON.stringify(data),
@@ -52,9 +52,9 @@ function post_data(){
                 submit_button.disabled = false;
                 submit_button.value = submit_button_old_value;
 
-                window.location.href = "/thank-you/"
+                window.location.href = "/thank-you/";
 
-                console.log("Done")
+                console.log("Done");
             },
         });
     }
