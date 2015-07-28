@@ -53,7 +53,7 @@ function post_data(){
                 submit_button.value = submit_button_old_value;
 
                 window.location.href = "/thank-you/"
-
+                mixpanel.track("send contact form");
                 console.log("Done")
             },
         });

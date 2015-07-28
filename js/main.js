@@ -611,6 +611,22 @@ $(document).ready(function() {
         });
 });
 
+$(document).ready(function(){
+  /*============
+  MIXPANEL CALLBACKS
+  ============*/
+  $("#btn_hire_us").click(function(event) {
+    event.preventDefault();
+    mixpanel.track("click 'Hire us!'");
+  });
+  mixpanel.track('page visit');
+  mixpanel.track_links("#id_contact a", "click contact link");
+  mixpanel.track_links(".contact-bar a", "click social link");
+  mixpanel.track_links(".footer_social a", "click social link");
+  mixpanel.track_links(".tags a", "click technology link");
+  mixpanel.track_links(".navbar-collapse a", "click navigation link");
+  mixpanel.track_links(".our_clients a", "click client link");
+});
 
 /**
  * jQuery Plugin to obtain touch gestures from iPhone, iPod Touch, iPad, and Android mobile phones
@@ -619,6 +635,3 @@ $(document).ready(function() {
  * @author Andreas Waltl, netCU Internetagentur (http://www.netcu.de)
  */
 (function($){$.fn.touchwipe=function(settings){var config={min_move_x:20,min_move_y:20,wipeLeft:function(){},wipeRight:function(){},wipeUp:function(){},wipeDown:function(){},preventDefaultEvents:true};if(settings)$.extend(config,settings);this.each(function(){var startX;var startY;var isMoving=false;function cancelTouch(){this.removeEventListener('touchmove',onTouchMove);startX=null;isMoving=false}function onTouchMove(e){if(config.preventDefaultEvents){e.preventDefault()}if(isMoving){var x=e.touches[0].pageX;var y=e.touches[0].pageY;var dx=startX-x;var dy=startY-y;if(Math.abs(dx)>=config.min_move_x){cancelTouch();if(dx>0){config.wipeLeft()}else{config.wipeRight()}}else if(Math.abs(dy)>=config.min_move_y){cancelTouch();if(dy>0){config.wipeDown()}else{config.wipeUp()}}}}function onTouchStart(e){if(e.touches.length==1){startX=e.touches[0].pageX;startY=e.touches[0].pageY;isMoving=true;this.addEventListener('touchmove',onTouchMove,false)}}if('ontouchstart'in document.documentElement){this.addEventListener('touchstart',onTouchStart,false)}});return this}})(jQuery);
-
-
-
