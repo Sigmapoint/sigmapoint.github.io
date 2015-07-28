@@ -72,6 +72,11 @@ Run the development server:
 The development server will watch for source changes and rebuild on every
 file save. So a CTRL+R will suffice to see changes in browser.
 
+Starting local server 
+---------------
+    $ rvm use 2.2.0@sigmapoint.github.io
+    $ bundle exec jekyll serve
+
 
 Deploying
 ---------
