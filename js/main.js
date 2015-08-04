@@ -574,15 +574,15 @@
             },
             kb: {
                 name: 'Kamil Burczyk',
-                description: 'Lorem ipsum',
-                position: ['CEO', 'Founder'],
-                goodAt: ['being CEO'],
+                description: 'I love high quality and simplicity that\'s why I became Apple fan. The same features I value in development so building every product leads to customer satisfaction.',
+                position: ['CTO', 'Co-Founder', 'iOS Developer'],
+                goodAt: ['Co-Founder at Sigmapoint', 'fitness and technology geek', 'Apple fan'],
                 contact: {
                     facebook: null,
-                    linkedin: null,
-                    github: null,
-                    website: null,
-                    twitter: null
+                    linkedin: 'https://pl.linkedin.com/in/kamilburczyk',
+                    github: 'https://github.com/burczyk',
+                    website: 'blog.sigmapoint.pl',
+                    twitter: 'https://twitter.com/KamilBurczyk'
                 }
             },
             kt: {
@@ -765,7 +765,7 @@
         $('.person').fadeTo(0, inactive);
         $('.line').fadeTo(0, inactive);
         $(active.person).fadeTo(0, 1);
-        $('.description-center').fadeTo(0, 0);
+        //$('.description-center').fadeTo(0, 0);
         $('.kt').fadeTo(0, 0);
 
         var setHoverForPerson = function (initials) {

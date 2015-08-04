@@ -122,6 +122,8 @@
 }
 
 .person.kb {
+    background: url('../images/team/kb.jpg') 0 0 no-repeat;
+    background-size: 100%;
     top: 177px;
     left: calc(76% + 4px);
 }
@@ -358,17 +360,129 @@
         width: 124px;
         height: 124px;
     }
-    .line {
-        transform: translateY(-28px);
-    }
-    .stitch {
-        transform: translateY(-28px);
-    }
     .person.ag {
         transform: translateY(-14px);
     }
     .person.kb {
-        transform: translateY(-14px);
+        transform: translateY(-27px);
+    }
+    .person.kt {
+        transform: translateY(-67px);
+    }
+    .person.kd {
+        transform: translateY(-100px);
+    }
+    .person.jp {
+        transform: translateY(-140px);
+    }
+    .person.pz {
+        transform: translateY(-142px);
+    }
+    .person.pb {
+        transform: translateY(-144px);
+    }
+    .person.kk {
+        transform: translateY(-134px);
+    }
+    .person.km {
+        transform: translateY(-82px);
+    }
+    .person.gs {
+        transform: translateY(-44px);
     }
 
+
+    .line {
+        transform: translateY(-28px);
+    }
+    .line.kb.ios {
+        transform: translateY(-53px);
+    }
+    .line.kt {
+        transform: translateY(-82px);
+    }
+    .line.kd.ios {
+        transform: translateY(-87px);
+    }
+    .line.kd.android {
+        transform: translateY(-98px);
+    }
+    .line.jp,
+    .line.pz,
+    .line.pb.android,
+    .line.pb.windows{
+        transform: translateY(-113px);
+    }
+    .line.kk {
+        transform: translateY(-98px);
+    }
+    .line.km.front {
+        transform: translateY(-90px);
+    }
+    .line.km.back {
+        transform: translateY(-80px);
+    }
+    .line.gs {
+        transform: translateY(-60px);
+    }
+
+    .stitch {
+        transform: translateY(-33px);
+    }
+    .stitch.business {
+        height: 20px;
+    }
+    .description.business {
+        left: 20%;
+    }
+    .stitch.ceo {
+        height: 20px;
+    }
+    .description.ceo {
+        left: 56%;
+    }
+    .stitch.ios {
+        width: 20px;
+        height: 60px;
+        transform: translateY(-74px);
+    }
+    .description.ios {
+        transform: translateY(-74px);
+    }
+    .stitch.android {
+        width: 80px;
+        height: 20px;
+        transform: translateY(-127px);
+    }
+    .description.android {
+        left: 64%;
+    }
+    .stitch.windows {
+        width: 20px;
+        height: 20px;
+        transform: translateY(-127px);
+    }
+    .description.windows {
+        left: 20%;
+    }
+    .stitch.front {
+        width: 40px;
+        height: 20px;
+        transform: translateY(-77px);
+    }
+    .stitch.back {
+        width: 20px;
+        height: 40px;
+        transform: translateY(-74px);
+    }
+    .description.back {
+        left: 10%;
+    }
+
+    .team .description-center {
+        width: 331px;
+        height: 260px;
+        top: 292px;
+        left: 319px;
+    }
 }
