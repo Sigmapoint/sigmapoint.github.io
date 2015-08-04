@@ -534,37 +534,215 @@
         /* TEAM */
         var personDescription = {
             ag: {
-                name: 'Agnieszka G�owacka',
+                name: 'Agnieszka Głowacka',
                 description: 'Lorem ipsum',
-                titles: ['First', 'Second'],
-                motto: 'Sth'
+                position: ['Business Development Specialist', null],
+                goodAt: ['make people laugh', 'make coffee'],
+                contact: {
+                    facebook: null,
+                    linkedin: null,
+                    github: null,
+                    website: null,
+                    twitter: null
+                }
             },
             ks: {
                 name: 'Kamil Stanuch',
                 description: 'Lorem ipsum',
-                titles: ['First', 'Second'],
-                motto: 'Sth'
+                position: ['CEO', 'Founder'],
+                goodAt: ['being CEO'],
+                contact: {
+                    facebook: null,
+                    linkedin: null,
+                    github: null,
+                    website: null,
+                    twitter: null
+                }
+            },
+            mp: {
+                name: 'Mateusz Pluta',
+                description: 'Lorem ipsum',
+                position: ['CEO', 'Founder'],
+                goodAt: ['being CEO'],
+                contact: {
+                    facebook: null,
+                    linkedin: null,
+                    github: null,
+                    website: null,
+                    twitter: null
+                }
+            },
+            kb: {
+                name: 'Kamil Burczyk',
+                description: 'Lorem ipsum',
+                position: ['CEO', 'Founder'],
+                goodAt: ['being CEO'],
+                contact: {
+                    facebook: null,
+                    linkedin: null,
+                    github: null,
+                    website: null,
+                    twitter: null
+                }
+            },
+            kt: {
+                name: 'Krzysztof z Grecji',
+                description: 'Lorem ipsum',
+                position: ['CEO', 'Founder'],
+                goodAt: ['being CEO'],
+                contact: {
+                    facebook: null,
+                    linkedin: null,
+                    github: null,
+                    website: null,
+                    twitter: null
+                }
+            },
+            kd: {
+                name: 'Kamil Demczuk',
+                description: 'Lorem ipsum',
+                position: ['CEO', 'Founder'],
+                goodAt: ['being CEO'],
+                contact: {
+                    facebook: null,
+                    linkedin: null,
+                    github: null,
+                    website: null,
+                    twitter: null
+                }
+            },
+            jp: {
+                name: 'Jakub Pelczar',
+                description: 'Lorem ipsum',
+                position: ['CEO', 'Founder'],
+                goodAt: ['being CEO'],
+                contact: {
+                    facebook: null,
+                    linkedin: null,
+                    github: null,
+                    website: null,
+                    twitter: null
+                }
+            },
+            pz: {
+                name: 'Paweł Żak',
+                description: 'Lorem ipsum',
+                position: ['CEO', 'Founder'],
+                goodAt: ['being CEO'],
+                contact: {
+                    facebook: null,
+                    linkedin: null,
+                    github: null,
+                    website: null,
+                    twitter: null
+                }
+            },
+            pb: {
+                name: 'Przemysław Burczyk',
+                description: 'Lorem ipsum',
+                position: ['CEO', 'Founder'],
+                goodAt: ['being CEO'],
+                contact: {
+                    facebook: null,
+                    linkedin: null,
+                    github: null,
+                    website: null,
+                    twitter: null
+                }
+            },
+            kk: {
+                name: 'Karol Manijak',
+                description: 'Lorem ipsum',
+                position: ['CEO', 'Founder'],
+                goodAt: ['being CEO'],
+                contact: {
+                    facebook: null,
+                    linkedin: null,
+                    github: null,
+                    website: null,
+                    twitter: null
+                }
+            },
+            km: {
+                name: 'Karol Majta',
+                description: 'Lorem ipsum',
+                position: ['CEO', 'Founder'],
+                goodAt: ['being CEO'],
+                contact: {
+                    facebook: null,
+                    linkedin: null,
+                    github: null,
+                    website: null,
+                    twitter: null
+                }
+            },
+            gs: {
+                name: 'Grzegorz Sikorski',
+                description: 'Lorem ipsum',
+                position: ['CEO', 'Founder'],
+                goodAt: ['being CEO'],
+                contact: {
+                    facebook: null,
+                    linkedin: null,
+                    github: null,
+                    website: null,
+                    twitter: null
+                }
             }
         };
 
         var inactive = 0.1;
 
         var active = {
-            person: '.ag',
+            person: null,
             area: '.business'
         };
 
         var setActiveDescription = function(initials) {
-            var description = personDescription[initials];
-            /**
-            * There need to be binding values to the HTML elements
-            */
+            var element = $('.description-center');
+            if (initials === 'none') {
+                element.animate({
+                    opacity: 0
+                });
+            }
+            else {
+                var description = personDescription[initials.substr(1,2)];
+                element.animate({
+                    opacity: 0
+                }, function() {
+                    element.find('#name').text(description.name);
+                    element.find('#position1').text(description.position[0]);
+                    element.find('#position2').hide();
+                    if (description.position[1]) {
+                        element.find('#position2').text(description.position[1]);
+                        element.find('#position2').show();
+                    }
+                    element.find('#description').text(description.description);
+                    element.find('#good-at').empty();
+                    element.find('#good-at').append('Good at: ');
+                    _.each(description.goodAt, function(d) {
+                        element.find('#good-at').append('<span class="good-at right label label-default label-default-tech">' + d +'</span>');
+                    });
+                    $.each(description.contact, function(key, value) {
+                        if (value) {
+                            element.find('.my-' + key).show().attr("href", value);
+                        }
+                        else {
+                            element.find('.my-' + key).hide();
+                        }
+                    });
+
+                    element.animate({
+                        opacity: 1
+                    });
+                });
+            }
         };
 
         var setActivePerson = function (person) {
             $(person).click(function () {
-                if (person !== active.person) {
-                    var initials = person.substr(0, 3);
+                var initials = person.substr(0, 3);
+                if (initials !== active.person) {
                     setActiveDescription(initials);
                     $(active.person).animate({
                         opacity: inactive
@@ -574,24 +752,47 @@
                     });
                     active.person = initials;
                 }
+                else {
+                    setActiveDescription('none');
+                    $(active.person).animate({
+                        opacity: inactive
+                    });
+                    active.person = null;
+                }
             });
         };
 
         $('.person').fadeTo(0, inactive);
         $('.line').fadeTo(0, inactive);
         $(active.person).fadeTo(0, 1);
-
+        $('.description-center').fadeTo(0, 0);
         $('.kt').fadeTo(0, 0);
 
-        $('.person').hover(function() {
-            var classes = $(this).attr('class').split(/\s+/);
-            var initials = classes[1];
-
-        });
-
-        var getClasses = function(element) {
-            return element.attr('class').split(/\s+/);
+        var setHoverForPerson = function (initials) {
+            $(initials + '.person').hover(function () {
+                $(this).animate({
+                    opacity: 1
+                });
+            }, function () {
+                if (initials !== active.person) {
+                    $(this).animate({
+                        opacity: inactive
+                    }, 100);
+                }
+            });
         };
+
+        setHoverForPerson('.ag');
+        setHoverForPerson('.ks');
+        setHoverForPerson('.mp');
+        setHoverForPerson('.kb');
+        setHoverForPerson('.kd');
+        setHoverForPerson('.jp');
+        setHoverForPerson('.pz');
+        setHoverForPerson('.pb');
+        setHoverForPerson('.km');
+        setHoverForPerson('.gs');
+        setHoverForPerson('.kk');
 
         setActivePerson('.ag.person');
         setActivePerson('.ks.person');

@@ -10,11 +10,39 @@
     margin: 350px auto;
 }
 
-.team .hideCenter {
-    width: 35.2%;
-    height: 100px;
+.team .description-center {
+    width: 403px;
+    height: 316px;
     position: absolute;
-    
+    top: 350px;
+    left: 384px;
+    background-color: #fff;
+    border: 2px solid #E74C3C;
+    border-radius: 20px;
+    z-index: 100;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+
+.description-center #name {
+    text-align: center;
+}
+
+.description-center .label {
+    cursor: default;
+}
+
+.description-center hr {
+    margin: 10px 0;
+}
+
+.description-center .label {
+    margin: 15px 10px 10px 0;
+}
+
+.description-center #description {
+    margin-top: 10px;
+    text-align: justify;
 }
 
 .team .people {
@@ -30,6 +58,7 @@
     color: #000000;
     background-color: #fff;
     z-index: 5;
+    cursor: pointer;
 }
 
 .line {
@@ -236,7 +265,7 @@
 }
 
 .stitch.business {
-    width: 25px;
+    width: 2.0833%;
     height: 25px;
     top: 275px;
     left: calc(41% + 1px);
@@ -249,7 +278,7 @@
 }
 
 .stitch.ceo {
-    width: 75px;
+    width: 6.25%;
     height: 25px;
     top: 275px;
     left: calc(49% + 4px);
@@ -322,5 +351,24 @@
 }
 
 @media only screen and (max-width: 1200px) {
+    .center {
+        transform: translateY(-58px);
+    }
+    .person {
+        width: 124px;
+        height: 124px;
+    }
+    .line {
+        transform: translateY(-28px);
+    }
+    .stitch {
+        transform: translateY(-28px);
+    }
+    .person.ag {
+        transform: translateY(-14px);
+    }
+    .person.kb {
+        transform: translateY(-14px);
+    }
 
 }
