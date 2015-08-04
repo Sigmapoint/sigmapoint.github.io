@@ -1,27 +1,27 @@
 (function($){
-    $(document).ready(function(){
+    $(document).ready(function() {
 
         /*----------------------------------------------------*/
         /*	Sticky Header
          /*----------------------------------------------------*/
-        (function() {
+        (function () {
             $('.navbar').scrollToFixed(); // Fixed Navigation Bar
 
-           // Moving Logo from Logo-Bar to Navbar-header on Tab size of 768px or Minimum
-           $(window).on("load resize orientationchange",function(e){
-                if($( window ).width() < 768){
+            // Moving Logo from Logo-Bar to Navbar-header on Tab size of 768px or Minimum
+            $(window).on("load resize orientationchange", function (e) {
+                if ($(window).width() < 768) {
                     $("#logo").detach().appendTo($(".navbar-header"));
                 }
-                else{
+                else {
                     $("#logo").detach().appendTo('#logo-bar .container .col-xs-12')
                 }
             });
 
-         })();
+        })();
 
         /*----------------------------------------------------*/
 
-          if ($.fn.cssOriginal != undefined) {
+        if ($.fn.cssOriginal != undefined) {
             $.fn.css = $.fn.cssOriginal;
         }
 
@@ -31,8 +31,9 @@
         // Add classes for other carousels
         var $carousel = $('.recent-work-jc');
         var scrollCount;
+
         function adjustScrollCount() {
-            if( $(window).width() < 768 ) {
+            if ($(window).width() < 768) {
                 scrollCount = 1;
             } else {
                 scrollCount = 3;
@@ -40,10 +41,10 @@
         }
 
         function adjustCarouselHeight() {
-            $carousel.each(function() {
-                var $this    = $(this);
+            $carousel.each(function () {
+                var $this = $(this);
                 var maxHeight = -1;
-                $this.find('li').each(function() {
+                $this.find('li').each(function () {
                     maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
                 });
                 $this.height(maxHeight);
@@ -55,49 +56,49 @@
             adjustScrollCount();
             var i = 0;
             var g = {};
-            $carousel.each(function() {
+            $carousel.each(function () {
                 i++;
                 var $this = $(this);
                 g[i] = $this.jcarousel({
-                    animation           : 600,
-                    scroll              : scrollCount
+                    animation: 600,
+                    scroll: scrollCount
                 });
                 $this.jcarousel('scroll', 0);
-                $this.prev().find('.jcarousel-prev').bind('active.jcarouselcontrol', function() {
+                $this.prev().find('.jcarousel-prev').bind('active.jcarouselcontrol', function () {
                     $(this).addClass('active');
-                }).bind('inactive.jcarouselcontrol', function() {
-                        $(this).removeClass('active');
-                    }).jcarouselControl({
-                        target: '-='+scrollCount,
-                        carousel: g[i]
-                    });
+                }).bind('inactive.jcarouselcontrol', function () {
+                    $(this).removeClass('active');
+                }).jcarouselControl({
+                    target: '-=' + scrollCount,
+                    carousel: g[i]
+                });
 
-                $this.prev().find('.jcarousel-next').bind('active.jcarouselcontrol', function() {
+                $this.prev().find('.jcarousel-next').bind('active.jcarouselcontrol', function () {
                     $(this).addClass('active');
-                }).bind('inactive.jcarouselcontrol', function() {
-                        $(this).removeClass('active');
-                    }).jcarouselControl({
-                        target: '+='+scrollCount,
-                        carousel: g[i]
-                    });
+                }).bind('inactive.jcarouselcontrol', function () {
+                    $(this).removeClass('active');
+                }).jcarouselControl({
+                    target: '+=' + scrollCount,
+                    carousel: g[i]
+                });
 
                 $this.touchwipe({
-                    wipeLeft: function() {
-                        $this.jcarousel('scroll','+='+scrollCount);
+                    wipeLeft: function () {
+                        $this.jcarousel('scroll', '+=' + scrollCount);
                     },
-                    wipeRight: function() {
-                        $this.jcarousel('scroll','-='+scrollCount);
+                    wipeRight: function () {
+                        $this.jcarousel('scroll', '-=' + scrollCount);
                     }
                 });
             });
         }
 
-        $(window).load(function(){
+        $(window).load(function () {
             initCarousel();
         });
 
         $(window).resize(function () {
-            $carousel.each(function() {
+            $carousel.each(function () {
                 var $this = $(this);
                 $this.jcarousel('destroy');
             });
@@ -113,7 +114,7 @@
         //  ============================
         //  = Scroll event function =
         //  ===========================
-        var goScrolling = function(elem) {
+        var goScrolling = function (elem) {
             var docViewTop = $(window).scrollTop();
             var docViewBottom = docViewTop + $(window).height();
             var elemTop = elem.offset().top;
@@ -126,15 +127,15 @@
         //  = Progress bars =
         //  =======================
         $('.progress_skill .bar').data('width', $(this).width()).css({
-            width : 0,
-            height:0
+            width: 0,
+            height: 0
         });
-        $(window).scroll(function() {
-            $('.progress_skill .bar').each(function() {
+        $(window).scroll(function () {
+            $('.progress_skill .bar').each(function () {
                 if (goScrolling($(this))) {
                     $(this).css({
-                        width : $(this).attr('data-value') + '%',
-                        height : $(this).attr('data-height') + '%'
+                        width: $(this).attr('data-value') + '%',
+                        height: $(this).attr('data-height') + '%'
                     });
                 }
             });
@@ -157,22 +158,22 @@
         /*===========================================================*/
         /*	Isotope Posrtfolio
          /*===========================================================*/
-        if(jQuery.isFunction(jQuery.fn.isotope)){
+        if (jQuery.isFunction(jQuery.fn.isotope)) {
             jQuery('.portfolio_list').isotope({
-                itemSelector : '.list_item',
-                layoutMode : 'fitRows',
-                animationEngine : 'jquery'
+                itemSelector: '.list_item',
+                layoutMode: 'fitRows',
+                animationEngine: 'jquery'
             });
 
             /* ---- Filtering ----- */
-            jQuery('#filter li').click(function(){
+            jQuery('#filter li').click(function () {
                 var $this = jQuery(this);
-                if ( $this.hasClass('selected') ) {
+                if ($this.hasClass('selected')) {
                     return false;
                 } else {
                     jQuery('#filter .selected').removeClass('selected');
                     var selector = $this.attr('data-filter');
-                    $this.parent().next().isotope({ filter: selector });
+                    $this.parent().next().isotope({filter: selector});
                     $this.addClass('selected');
                     return false;
                 }
@@ -193,10 +194,11 @@
             preloader: true,
             removalDelay: 0,
             mainClass: 'mfp-fade',
-            gallery:{enabled:true},
+            gallery: {enabled: true},
             callbacks: {
-                buildControls: function() {
-                    console.log('inside'); this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
+                buildControls: function () {
+                    console.log('inside');
+                    this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
                 }
             }
         });
@@ -229,8 +231,10 @@
             continuous: true,
             disableScroll: false,
             stopPropagation: false,
-            callback: function(index, elem) {},
-            transitionEnd: function(index, elem) {}
+            callback: function (index, elem) {
+            },
+            transitionEnd: function (index, elem) {
+            }
         });
 
         /*----------------------------------------------------*/
@@ -267,10 +271,10 @@
         /* ------------------ End Document ------------------ */
 
         /* PORTFOLIO */
-        $('.portfolio').hammer().bind('swipeleft', function() {
+        $('.portfolio').hammer().bind('swipeleft', function () {
             $('#carousel-example-generic').carousel('next');
         });
-        $('.portfolio').hammer().bind('swiperight', function() {
+        $('.portfolio').hammer().bind('swiperight', function () {
             $('#carousel-example-generic').carousel('prev');
             return false;
         });
@@ -286,12 +290,12 @@
         function Timer(callback, delay) {
             var timerId, start, remaining = delay;
 
-            this.pause = function() {
+            this.pause = function () {
                 window.clearTimeout(timerId);
                 remaining -= new Date() - start;
             };
 
-            this.resume = function() {
+            this.resume = function () {
                 start = new Date();
                 window.clearTimeout(timerId);
                 timerId = window.setTimeout(callback, remaining);
@@ -304,20 +308,20 @@
 
         var timer;
 
-        var anim = function(element) {
+        var anim = function (element) {
             $('.testimonial' + element).addClass('active');
-            timer = new Timer(function() {
+            timer = new Timer(function () {
                 $('.testimonial' + element).removeClass('active');
                 anim((element === testimonials ? 1 : element + 1));
             }, animationTime.pause);
         };
 
         //pause and resume animation on hover
-        $('.testimonial').hover(function() {
+        $('.testimonial').hover(function () {
             if (timer) {
                 timer.pause()
             }
-        }, function() {
+        }, function () {
             if (timer) {
                 timer.resume();
             }
@@ -334,41 +338,69 @@
 
         /* PROCESS */
         var descriptions = [
-            {step: 1, title: "Your idea", content: 'Our representative and expert meet with you to talk through your ' +
-            'idea, discuss user stories and create first image of potential product. On this stage we will advise you ' +
-            'what is best possible set of features in terms of current mobile standards and how to prioritize them, ' +
-            'which system versions your application should support etc.'},
+            {
+                step: 1,
+                title: "Your idea",
+                content: 'Our representative and expert meet with you to talk through your ' +
+                'idea, discuss user stories and create first image of potential product. On this stage we will advise you ' +
+                'what is best possible set of features in terms of current mobile standards and how to prioritize them, ' +
+                'which system versions your application should support etc.'
+            },
 
-            {step: 2, title: 'Product preparation & advisement', content: 'Now it\'s time for us to make even more ' +
-            'effort to prepare solid and reliable vision of your future application. We have intensive brainstorms ' +
-            'about product design and user experience.'},
+            {
+                step: 2,
+                title: 'Product preparation & advisement',
+                content: 'Now it\'s time for us to make even more ' +
+                'effort to prepare solid and reliable vision of your future application. We have intensive brainstorms ' +
+                'about product design and user experience.'
+            },
 
-            {step: 3, title: 'Closing the deal', content: 'At this point it\'s really close to transform an idea to an ' +
-            'ongoing project. After approval of all documents from both sides we are ready to start engineering and ' +
-            'make you happy!'},
+            {
+                step: 3,
+                title: 'Closing the deal',
+                content: 'At this point it\'s really close to transform an idea to an ' +
+                'ongoing project. After approval of all documents from both sides we are ready to start engineering and ' +
+                'make you happy!'
+            },
 
-            {step: 4, title: 'UI', content: 'If you dont have graphic mockups or you don\'t know how to handle UI, we ' +
-            'will do it for you. Before we accede to development process, we have to transform previous models into ' +
-            'pixel perfect visualizations. At this stage we translate user stories into clear and efficient user ' +
-            'interface keeping UX on a high level.'},
+            {
+                step: 4,
+                title: 'UI',
+                content: 'If you dont have graphic mockups or you don\'t know how to handle UI, we ' +
+                'will do it for you. Before we accede to development process, we have to transform previous models into ' +
+                'pixel perfect visualizations. At this stage we translate user stories into clear and efficient user ' +
+                'interface keeping UX on a high level.'
+            },
 
-            {step: 5, title: 'Development in Scrum', content: 'Now it\'s the time for development part of engineering. ' +
-            'We work in Scrum methodology to hold on to effective management of a whole project. All starts with a ' +
-            'Product Backlog and all tasks are systematically implemented during two-weeks Sprints. After every Sprint ' +
-            'you\'re able to monitor current progress of our work, therefore this approach gives you constanius update ' +
-            'on current stage of the project.'},
+            {
+                step: 5,
+                title: 'Development in Scrum',
+                content: 'Now it\'s the time for development part of engineering. ' +
+                'We work in Scrum methodology to hold on to effective management of a whole project. All starts with a ' +
+                'Product Backlog and all tasks are systematically implemented during two-weeks Sprints. After every Sprint ' +
+                'you\'re able to monitor current progress of our work, therefore this approach gives you constanius update ' +
+                'on current stage of the project.'
+            },
 
-            {step: 6, title: 'Heavy QA', content: 'After coding we perform heavy QA tests on different devices ' +
+            {
+                step: 6, title: 'Heavy QA', content: 'After coding we perform heavy QA tests on different devices ' +
             '(smartphones and tablets), screen sizes and densities to make sure that developed application is ready to ' +
-            'be used by wide range of users.'},
+            'be used by wide range of users.'
+            },
 
-            {step: 7, title: 'Deployment', content: 'In this part we release you application to Google Play, App Store or provide ' +
-            'executable file to you. Also, we prepare documentation, so implementing potential future features will be ' +
-            'piece of cake.'},
+            {
+                step: 7,
+                title: 'Deployment',
+                content: 'In this part we release you application to Google Play, App Store or provide ' +
+                'executable file to you. Also, we prepare documentation, so implementing potential future features will be ' +
+                'piece of cake.'
+            },
 
-            {step: 8, title: 'Customer Support', content: 'We provide support of created product on many levels. ' +
+            {
+                step: 8, title: 'Customer Support', content: 'We provide support of created product on many levels. ' +
             'Starting from basic things like answering questions, through making changes, to implementing new features ' +
-            'requested by you.'}
+            'requested by you.'
+            }
         ];
         var activeStep = 1;
         var activeStepSmall = 1;
@@ -380,11 +412,11 @@
         var titleSmall = descriptionSmall.find('h3');
         var contentSmall = descriptionSmall.find('p');
 
-        $('.inactive-first').css('opacity','0.2');
-        title.text( descriptions[activeStep - 1].step + '. ' + descriptions[activeStep - 1].title );
-        titleSmall.text( descriptions[activeStep - 1].step + '. ' + descriptions[activeStep - 1].title );
-        content.text( descriptions[activeStep - 1].content );
-        contentSmall.text( descriptions[activeStep - 1].content );
+        $('.inactive-first').css('opacity', '0.2');
+        title.text(descriptions[activeStep - 1].step + '. ' + descriptions[activeStep - 1].title);
+        titleSmall.text(descriptions[activeStep - 1].step + '. ' + descriptions[activeStep - 1].title);
+        content.text(descriptions[activeStep - 1].content);
+        contentSmall.text(descriptions[activeStep - 1].content);
 
         var settings = {
             active: 1,
@@ -393,22 +425,22 @@
             duration: 600
         };
 
-        var setActiveStep = function(index) {
+        var setActiveStep = function (index) {
             var tempActiveStep = activeStep;
             if (index !== activeStep) {
                 $('#step-' + index).fadeTo(settings.duration, settings.active);
                 if (index - 1 > 0) {
                     $('#step-' + ( index - 1 )).fadeTo(settings.duration, settings.preActive);
                 }
-                for ( var i = 1; i <= 8; i++ ) {
-                    if(i !== Number(index) && i !== (index - 1)) {
+                for (var i = 1; i <= 8; i++) {
+                    if (i !== Number(index) && i !== (index - 1)) {
                         $('#step-' + i).fadeTo(settings.duration, settings.inactive);
                     }
                 }
-                description.fadeOut(settings.duration/2, function() {
-                    title.text( descriptions[index-1].step + '. ' + descriptions[index-1].title );
-                    content.text( descriptions[index-1].content );
-                    description.fadeIn(settings.duration/2);
+                description.fadeOut(settings.duration / 2, function () {
+                    title.text(descriptions[index - 1].step + '. ' + descriptions[index - 1].title);
+                    content.text(descriptions[index - 1].content);
+                    description.fadeIn(settings.duration / 2);
                 });
                 activeStep = index;
                 $('#nav-' + tempActiveStep).removeClass('active');
@@ -417,7 +449,7 @@
         };
 
         var windowHeight = $(window).height();
-        var setActiveStepSmall = function() {
+        var setActiveStepSmall = function () {
             if ($('.circle').length) {
                 var position = $(document).scrollTop(),
                     tempActiveStep = activeStepSmall;
@@ -446,16 +478,16 @@
             }
         };
 
-        var clearAnimation = function(element) {
-            for ( var i = 1; i <= 8; i++ ) {
+        var clearAnimation = function (element) {
+            for (var i = 1; i <= 8; i++) {
                 $('#' + element + '-' + i).finish();
             }
             description.finish();
             descriptionSmall.finish();
         };
 
-        var forward = function() {
-            if(activeStep === 8) {
+        var forward = function () {
+            if (activeStep === 8) {
                 $('#range').val(1);
                 setActiveStep(1);
             }
@@ -465,8 +497,8 @@
             }
         };
 
-        var backward = function() {
-            if(activeStep === 1) {
+        var backward = function () {
+            if (activeStep === 1) {
                 return false;
             }
             else {
@@ -475,8 +507,8 @@
             }
         };
 
-        $(document).keydown(function(e) {
-            if(e.keyCode === 37) {
+        $(document).keydown(function (e) {
+            if (e.keyCode === 37) {
                 clearAnimation('step');
                 backward();
             }
@@ -487,55 +519,91 @@
 
         });
 
-        $('.nav').click(function() {
-            setActiveStep( Number($(this).text()) );
+        $('.nav').click(function () {
+            setActiveStep(Number($(this).text()));
         });
 
-        $('.step').click(function() {
-            setActiveStep( $(this).attr('id').substr(5,1) );
+        $('.step').click(function () {
+            setActiveStep($(this).attr('id').substr(5, 1));
         });
 
-        $(window).on('scroll', function() {
+        $(window).on('scroll', function () {
             setActiveStepSmall();
         });
 
         /* TEAM */
-        var inactive = 0.3;
+        var personDescription = {
+            ag: {
+                name: 'Agnieszka G³owacka',
+                description: 'Lorem ipsum',
+                titles: ['First', 'Second'],
+                motto: 'Sth'
+            },
+            ks: {
+                name: 'Kamil Stanuch',
+                description: 'Lorem ipsum',
+                titles: ['First', 'Second'],
+                motto: 'Sth'
+            }
+        };
 
-        var fade = function(element) {
-            var initials = element.substr(0,3);
-            console.log(initials);
-            $(element).hover(function() {
-                $(initials).animate({
-                    opacity: 1,
-                    filter: 'grayscale(100%)'
-                })
-            }, function() {
-                $(initials).fadeTo(500, inactive);
+        var inactive = 0.1;
+
+        var active = {
+            person: '.ag',
+            area: '.business'
+        };
+
+        var setActiveDescription = function(initials) {
+            var description = personDescription[initials];
+            /**
+            * There need to be binding values to the HTML elements
+            */
+        };
+
+        var setActivePerson = function (person) {
+            $(person).click(function () {
+                if (person !== active.person) {
+                    var initials = person.substr(0, 3);
+                    setActiveDescription(initials);
+                    $(active.person).animate({
+                        opacity: inactive
+                    });
+                    $(initials).animate({
+                        opacity: 1
+                    });
+                    active.person = initials;
+                }
             });
         };
 
         $('.person').fadeTo(0, inactive);
         $('.line').fadeTo(0, inactive);
+        $(active.person).fadeTo(0, 1);
 
-        fade('.ag.person');
-        fade('.ks.person');
-        fade('.mp.person');
-        fade('.kb.person');
-        //fade('.kt');
-        $('.kt').fadeTo(0,0);
-        fade('.kd.person');
-        fade('.jp.person');
-        fade('.pz.person');
-        fade('.pb.person');
-        fade('.km.person');
-        fade('.gs.person');
+        $('.kt').fadeTo(0, 0);
 
-        $('.kman.person').hover(function() {
-            $('.kman').fadeTo(500, 1);
-        }, function() {
-            $('.kman').fadeTo(500, inactive);
+        $('.person').hover(function() {
+            var classes = $(this).attr('class').split(/\s+/);
+            var initials = classes[1];
+
         });
+
+        var getClasses = function(element) {
+            return element.attr('class').split(/\s+/);
+        };
+
+        setActivePerson('.ag.person');
+        setActivePerson('.ks.person');
+        setActivePerson('.mp.person');
+        setActivePerson('.kb.person');
+        setActivePerson('.kd.person');
+        setActivePerson('.jp.person');
+        setActivePerson('.pz.person');
+        setActivePerson('.pb.person');
+        setActivePerson('.km.person');
+        setActivePerson('.gs.person');
+        setActivePerson('.kk.person');
     });
 })(this.jQuery);
 

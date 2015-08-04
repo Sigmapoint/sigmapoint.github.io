@@ -10,6 +10,13 @@
     margin: 350px auto;
 }
 
+.team .hideCenter {
+    width: 35.2%;
+    height: 100px;
+    position: absolute;
+    
+}
+
 .team .people {
     position: relative;
 }
@@ -171,7 +178,7 @@
     left: calc(27% + 3px);
 }
 
-.line.kman {
+.line.kk {
     background: url('../images/team/KMan.png') 0 0 no-repeat;
     width: 16.02%;
     height: 230px;
@@ -179,7 +186,7 @@
     left: calc(17% - 2px);
 }
 
-.person.kman {
+.person.kk {
     top: 791px;
     left: calc(10% + 6px);
 }
