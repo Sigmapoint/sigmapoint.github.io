@@ -4,6 +4,8 @@ Requirements
 We're building sigmapoint.pl using jekyll so you will at least need ruby
 to build/run it.
 
+###Windows
+
 If you're on Windows get ruby and ruby DevKit - be sure you use proper versions.
 Probably you need to add environmental variable for 'ruby' command manually or
 you have to use absolute path to run it.
@@ -20,9 +22,10 @@ Then in location where you extracted ruby DevKit run:
 
 Now you can go to 'Getting Bundler' section.
 
+###OS X and Linux
 
-If on OSX or Linux get yourself rvm by following these instructions
-https://rvm.io/ (on osx you need Homebrew before you install rvm).
+If on OS X or Linux get yourself rvm by following these instructions
+https://rvm.io/ (on OS X you need Homebrew before you install rvm).
 
 Then you probably want to install some non-system ruby:
 
@@ -68,6 +71,11 @@ Run the development server:
 
 The development server will watch for source changes and rebuild on every
 file save. So a CTRL+R will suffice to see changes in browser.
+
+Starting local server 
+---------------
+    $ rvm use 2.2.0@sigmapoint.github.io
+    $ bundle exec jekyll serve
 
 
 Deploying

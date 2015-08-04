@@ -124,46 +124,30 @@
 					<div class="widget_title">
 						<h4><span>Contact Us</span></h4>
 					</div>
-					<form id="contactform" method="get" novalidate enctype="multipart/form-data" action="" class="fsForm fsSingleColumn fsMaxCol1" id="fsForm1892401">
-						<input type="hidden" name="form" value="1892401" />
-						<input type="hidden" name="viewkey" value="SY6USJ0HjD" />
-						<input type="hidden" name="hidden_fields" id="hidden_fields1892401" value="" />
-						<input type="hidden" name="_submit" value="1" />
-						<input type="hidden" name="incomplete" id="incomplete1892401" value="" />
-						<input type="hidden" name="style_version" value="3" />
-						<div class="alert" role="alert" id="requiredFieldsError" style="display:none;">Please fill in a valid value for all required fields</div>
-						<div class="alert" role="alert" id="invalidFormatError" style="display:none;">Please ensure all values are in a proper format.</div>
-						<div class="alert" role="alert" id="resumeConfirm" style="display:none;">Are you sure you want to leave this form and resume later?</div>
-						<div class="alert" role="alert" id="fileTypeAlert" style="display:none;">You must upload one of the following file types for the selected field:</div>
-						<div class="alert" role="alert" id="embedError" style="display:none;">There was an error displaying the form. Please copy and paste the embed code again.</div>
-						<div class="alert" role="alert" id="applyDiscountButton" style="display:none;">Apply Discount</div>
-						<div class="alert" role="alert" id="dcmYouSaved" style="display:none;">You saved</div>
-						<div class="alert" role="alert" id="dcmWithCode" style="display:none;">with code</div>
-						<div class="alert" role="alert" id="submitButtonText" style="display:none;">Send</div>
-						<div class="alert" role="alert" id="submittingText" style="display:none;">Submitting</div>
+					<form id="contactform" method="get" enctype="multipart/form-data" action="" class="fsForm fsSingleColumn fsMaxCol1">
 						<div class="fsPage" id="fsPage1892401-1">
-						<div class="fsSection fs1Col">
-							<p>Let us know how can we help you with your project.</p>
-							<div id="fsRow1892401-1" class="fsRow fsFieldRow fsLastRow">
-								<div class="fsRowBody fsCell fsFieldCell fsFirst fsLast fsLabelVertical fsSpan100" id="fsCell29185149" lang="en">
-									<input type="email" id="field29185149" name="field29185149" size="55" placeholder="E-Mail address" title="E-Mail address" value="" class="fsField fsFormatEmail form-control" />
+							<div class="fsSection fs1Col">
+								<p>Let us know how can we help you with your project.</p>
+								<div id="fsRow1892401-1" class="fsRow fsFieldRow fsLastRow">
+									<div class="fsRowBody fsCell fsFieldCell fsFirst fsLast fsLabelVertical fsSpan100" id="fsCell29185149" lang="en">
+										<input type="email" id="field29185149" required name="field29185149" size="55" placeholder="E-Mail address" title="E-Mail address" value="" class="fsField fsFormatEmail form-control" pattern="^[^@]+@[^@]+$"
+											   data-validation-error-msg="You did not enter a valid e-mail"/>
+									</div>
 								</div>
-							</div>
-							<div id="fsRow1892401-2" class="fsRow fsFieldRow fsLastRow">
-								<div class="fsRowBody fsCell fsFieldCell fsFirst fsLast fsLabelVertical fsSpan100" id="fsCell29185136" lang="en">
-									<textarea id="field29185136" name="field29185136" rows="7" cols="40" required placeholder="Message" title="Message" class="fsField fsRequired form-control" aria-required="true"></textarea>
+								<div id="fsRow1892401-2" class="fsRow fsFieldRow fsLastRow">
+									<div class="fsRowBody fsCell fsFieldCell fsFirst fsLast fsLabelVertical fsSpan100" id="fsCell29185136" lang="en">
+										<textarea id="field29185136" name="field29185136" rows="7" cols="40" required placeholder="Message" title="Message" class="fsField fsRequired form-control" aria-required="true" data-validation="length" data-validation-length="min1"
+												  data-validation-error-msg="You did not enter a message"></textarea>
+									</div>
 								</div>
-							</div>
 							</div>
 						</div>
 						<div id="fsSubmit1892401" class="fsSubmit fsPagination">
-							<button type="button" id="fsPreviousButton1892401" class="fsPreviousButton" value="Previous Page" style="display:none;"><span class="fsFull">Previous</span><span class="fsSlim">&larr;</span></button>
-							<button type="button" id="fsNextButton1892401" class="fsNextButton" value="Next Page" style="display:none;"><span class="fsFull">Next</span><span class="fsSlim">&rarr;</span></button>
 							<input id="fsSubmitButton1892401"
-							class="fsSubmitButton btn btn-default btn-lg"
-							style="display: block;"
-							type="submit"
-							value="Send" />
+							       class="fsSubmitButton btn btn-default btn-lg"
+							       style="display: block;"
+							       type="submit"
+							       value="Send" />
 							<div class="clear"></div>
 						</div>
 					</form>
@@ -256,6 +240,7 @@
 	<script type="text/javascript" src="/js/carousel.js"></script>
     <script src="/js/main.js"></script>
 	<script type="text/javascript" src="/js/wow.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.1/jquery.form-validator.min.js"></script>
 
     <script>
         $(window).load(function(){
@@ -315,8 +300,18 @@ $(document).ready(function(){
 
     $('#contactform').on('submit', function (e) {
         e.preventDefault();
-        post_data();
+//        post_data();
+		console.log('on submit');
     });
+
+    $.validate({
+		modules : 'html5',
+		onSuccess: function() {
+			console.log('on success');
+			post_data();
+			return true;
+		}
+	});
 
 </script>
 <script>

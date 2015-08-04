@@ -1857,7 +1857,12 @@ textarea {
     box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(231, 76, 60, 0.6);
     outline:none;
 }
-
+span.form-error.help-block {
+    color: #E74C3C;
+}
+input.fsSubmitButton.btn.btn-default.btn-lg:disabled {
+    color: #bbb !important;
+}
 
 label.error {
     color: #ebedef;
