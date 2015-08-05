@@ -63,19 +63,22 @@
     color: #000000;
     background-color: #fff;
     z-index: 5;
+}
+
+.person.hoverable {
     cursor: pointer;
 }
 
 .person.ag {
-    background: url('../images/team/ag_person.png') 0 0 no-repeat;
+    background: url('../images/team/ag_person.jpg') 0 0 no-repeat;
     background-size: 100%;
 }
 .person.ks {
-    background: url('../images/team/ks_person.png') 0 0 no-repeat;
+    background: url('../images/team/ks_person.jpg') 0 0 no-repeat;
     background-size: 100%;
 }
 .person.mp {
-    background: url('../images/team/mp_person.png') 0 0 no-repeat;
+    background: url('../images/team/mp_person.jpg') 0 0 no-repeat;
     background-size: 100%;
 }
 .person.kb {
@@ -83,35 +86,35 @@
     background-size: 100%;
 }
 .person.kt {
-    background: url('../images/team/kt_person.png') 0 0 no-repeat;
+    background: url('../images/team/kt_person.jpg') 0 0 no-repeat;
     background-size: 100%;
 }
 .person.kd {
-    background: url('../images/team/kd_person.png') 0 0 no-repeat;
+    background: url('../images/team/kd_person.jpg') 0 0 no-repeat;
     background-size: 100%;
 }
 .person.jp {
-    background: url('../images/team/jp_person.png') 0 0 no-repeat;
+    background: url('../images/team/jp_person.jpg') 0 0 no-repeat;
     background-size: 100%;
 }
 .person.pz {
-    background: url('../images/team/pz_person.png') 0 0 no-repeat;
+    background: url('../images/team/pz_person.jpg') 0 0 no-repeat;
     background-size: 100%;
 }
 .person.pb {
-    background: url('../images/team/pb_person.png') 0 0 no-repeat;
+    background: url('../images/team/pb_person.jpg') 0 0 no-repeat;
     background-size: 100%;
 }
 .person.kk {
-    background: url('../images/team/kk_person.png') 0 0 no-repeat;
+    background: url('../images/team/kk_person.jpg') 0 0 no-repeat;
     background-size: 100%;
 }
 .person.km {
-    background: url('../images/team/km_person.png') 0 0 no-repeat;
+    background: url('../images/team/km_person.jpg') 0 0 no-repeat;
     background-size: 100%;
 }
 .person.gs {
-    background: url('../images/team/hs_person.png') 0 0 no-repeat;
+    background: url('../images/team/hs_person.jpg') 0 0 no-repeat;
     background-size: 100%;
 }
 
@@ -127,12 +130,12 @@
     width: 17.09%;
     height: 200px;
     top: 177px;
-    left: calc(25% + 2px);
+    left: calc(25% + 3px);
 }
 
 .person.ag.hoverable {
     top: 100px;
-    left: calc(12% + 4px);
+    left: calc(12% + 5px);
 }
 
 .line.ks {
@@ -173,7 +176,7 @@
     background: url('../images/team/KB_ios.png') 0 0 no-repeat;
     width: 16.02%;
     height: 200px;
-    top: 322px;
+    top: 323px;
     left: 67%;
 }
 
@@ -199,7 +202,7 @@
     background: url('../images/team/KD_ios.png') 0 0 no-repeat;
     width: 16.02%;
     height: 200px;
-    top: 507px;
+    top: 505px;
     left: 67%;
 }
 

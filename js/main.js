@@ -538,7 +538,7 @@
                 name: 'Agnieszka Głowacka',
                 description: 'Responsible for all those poor guys in our software house, which make me kind of Sigmapoint Queen.',
                 position: ['Business Development Specialist', null],
-                goodAt: ['3D modeling enthusiast', ''],
+                goodAt: ['3D modeling enthusiast'],
                 contact: {
                     facebook: null,
                     linkedin: null,
@@ -703,13 +703,6 @@
             }
         };
 
-        var inactive = 0.1;
-
-        var active = {
-            person: null,
-            area: '.business'
-        };
-
         var setActiveDescription = function(initials) {
             var element = $('.description-center');
             if (initials === 'none') {
@@ -753,69 +746,68 @@
         var setActivePerson = function (person) {
             $(person).click(function () {
                 var initials = person.substr(0, 3);
-                if (initials !== active.person) {
+                if (!activePerson) {
+                    $.each(_.omit(personDescription, initials.substr(1,2)), function(key, value) {
+                        console.log(key);
+                        $('.' + key + '.person.hoverable').animate({
+                            opacity: inactive
+                        });
+                        $('.' + key + '.line').animate({
+                            opacity: inactive
+                        });
+                    });
                     setActiveDescription(initials);
-                    $(active.person).animate({
-                        opacity: inactive
-                    });
-                    $(initials).animate({
-                        opacity: 1
-                    });
-                    active.person = initials;
+                    activePerson = initials;
                 }
                 else {
-                    setActiveDescription('none');
-                    $(active.person).animate({
-                        opacity: inactive
-                    });
-                    active.person = null;
+                    if (initials !== activePerson) {
+                        setActiveDescription(initials);
+                        $(activePerson + '.hoverable').animate({
+                            opacity: inactive
+                        });
+                        $(activePerson + '.line').animate({
+                            opacity: inactive
+                        });
+                        $(initials + '.hoverable').animate({
+                            opacity: 1
+                        });
+                        $(initials + '.line').animate({
+                            opacity: 1
+                        });
+                        activePerson = initials;
+                    }
+                    else {
+                        setActiveDescription('none');
+                        $.each(personDescription, function(key, value) {
+                            console.log(key);
+                            $('.' + key + '.person.hoverable').animate({
+                                opacity: 1
+                            });
+                            $('.' + key + '.line').animate({
+                                opacity: 1
+                            });
+                        });
+                        activePerson = null;
+                    }
                 }
             });
         };
 
-        //$('.person').fadeTo(0, inactive);
-        $('.line').fadeTo(0, inactive);
-        $(active.person).fadeTo(0, 1);
-        $('.description-center').fadeTo(0, 0);
-
         var setHoverForPerson = function (initials) {
             $(initials + '.person.hoverable').hover(function () {
-                $(this).animate({
-                    opacity: 1
-                });
+                if (activePerson) {
+                    $(this).animate({
+                        opacity: 1
+                    });
+                }
             }, function () {
-                if (initials !== active.person) {
+                if (activePerson && initials !== activePerson) {
                     $(this).animate({
                         opacity: inactive
                     }, 100);
                 }
             });
         };
-
-        setHoverForPerson('.ag');
-        setHoverForPerson('.ks');
-        setHoverForPerson('.mp');
-        setHoverForPerson('.kb');
-        setHoverForPerson('.kd');
-        setHoverForPerson('.jp');
-        setHoverForPerson('.pz');
-        setHoverForPerson('.pb');
-        setHoverForPerson('.km');
-        setHoverForPerson('.gs');
-        setHoverForPerson('.kk');
-        setHoverForPerson('.kt');
-
-        setActivePerson('.ag.person');
-        setActivePerson('.ks.person');
-        setActivePerson('.mp.person');
-        setActivePerson('.kb.person');
-        setActivePerson('.kd.person');
-        setActivePerson('.jp.person');
-        setActivePerson('.pz.person');
-        setActivePerson('.pb.person');
-        setActivePerson('.km.person');
-        setActivePerson('.gs.person');
-        setActivePerson('.kk.person');
 
         var createDescriptionsForMobile = function() {
             var mobileView = $('.mobile');
@@ -860,7 +852,43 @@
             });
         };
 
+
+
+        //Initials
         createDescriptionsForMobile();
+
+        setHoverForPerson('.ag');
+        setHoverForPerson('.ks');
+        setHoverForPerson('.mp');
+        setHoverForPerson('.kb');
+        setHoverForPerson('.kd');
+        setHoverForPerson('.jp');
+        setHoverForPerson('.pz');
+        setHoverForPerson('.pb');
+        setHoverForPerson('.km');
+        setHoverForPerson('.gs');
+        setHoverForPerson('.kk');
+        setHoverForPerson('.kt');
+
+        setActivePerson('.ag.person.hoverable');
+        setActivePerson('.ks.person.hoverable');
+        setActivePerson('.mp.person.hoverable');
+        setActivePerson('.kb.person.hoverable');
+        setActivePerson('.kd.person.hoverable');
+        setActivePerson('.jp.person.hoverable');
+        setActivePerson('.pz.person.hoverable');
+        setActivePerson('.pb.person.hoverable');
+        setActivePerson('.km.person.hoverable');
+        setActivePerson('.gs.person.hoverable');
+        setActivePerson('.kk.person.hoverable');
+        setActivePerson('.kt.person.hoverable');
+
+        $('.description-center').fadeTo(0, 0);
+
+
+        var inactive = 0.1;
+
+        var activePerson = null;
     });
 })(this.jQuery);
 
