@@ -534,10 +534,11 @@
         /* TEAM */
         var personDescription = {
             ag: {
+                initials: 'ag',
                 name: 'Agnieszka Głowacka',
-                description: 'Lorem ipsum',
+                description: 'Responsible for all those poor guys in our software house, which make me kind of Sigmapoint Queen.',
                 position: ['Business Development Specialist', null],
-                goodAt: ['make people laugh', 'make coffee'],
+                goodAt: ['3D modeling enthusiast', ''],
                 contact: {
                     facebook: null,
                     linkedin: null,
@@ -547,6 +548,7 @@
                 }
             },
             ks: {
+                initials: 'ks',
                 name: 'Kamil Stanuch',
                 description: 'Lorem ipsum',
                 position: ['CEO', 'Founder'],
@@ -560,6 +562,7 @@
                 }
             },
             mp: {
+                initials: 'mp',
                 name: 'Mateusz Pluta',
                 description: 'Lorem ipsum',
                 position: ['CEO', 'Founder'],
@@ -573,6 +576,7 @@
                 }
             },
             kb: {
+                initials: 'kb',
                 name: 'Kamil Burczyk',
                 description: 'I love high quality and simplicity that\'s why I became Apple fan. The same features I value in development so building every product leads to customer satisfaction.',
                 position: ['CTO', 'Co-Founder', 'iOS Developer'],
@@ -586,7 +590,8 @@
                 }
             },
             kt: {
-                name: 'Krzysztof z Grecji',
+                initials: 'kt',
+                name: 'Krzysztof Tsitsaris',
                 description: 'Lorem ipsum',
                 position: ['CEO', 'Founder'],
                 goodAt: ['being CEO'],
@@ -599,6 +604,7 @@
                 }
             },
             kd: {
+                initials: 'kd',
                 name: 'Kamil Demczuk',
                 description: 'Lorem ipsum',
                 position: ['CEO', 'Founder'],
@@ -612,6 +618,7 @@
                 }
             },
             jp: {
+                initials: 'jp',
                 name: 'Jakub Pelczar',
                 description: 'Lorem ipsum',
                 position: ['CEO', 'Founder'],
@@ -625,6 +632,7 @@
                 }
             },
             pz: {
+                initials: 'pz',
                 name: 'Paweł Żak',
                 description: 'Lorem ipsum',
                 position: ['CEO', 'Founder'],
@@ -638,6 +646,7 @@
                 }
             },
             pb: {
+                initials: 'pb',
                 name: 'Przemysław Burczyk',
                 description: 'Lorem ipsum',
                 position: ['CEO', 'Founder'],
@@ -651,10 +660,11 @@
                 }
             },
             kk: {
+                initials: 'kk',
                 name: 'Karol Manijak',
-                description: 'Lorem ipsum',
-                position: ['CEO', 'Founder'],
-                goodAt: ['being CEO'],
+                description: 'I really like sleeping which force me to be yerba-mate-lover. Fan of minimalism in all aspects of life.',
+                position: ['Frontend Developer', 'Web designer'],
+                goodAt: ['Almost graduated physicist', 'Esthete', ''],
                 contact: {
                     facebook: null,
                     linkedin: null,
@@ -664,6 +674,7 @@
                 }
             },
             km: {
+                initials: 'km',
                 name: 'Karol Majta',
                 description: 'Lorem ipsum',
                 position: ['CEO', 'Founder'],
@@ -677,10 +688,11 @@
                 }
             },
             gs: {
+                initials: 'gs',
                 name: 'Grzegorz Sikorski',
-                description: 'Lorem ipsum',
-                position: ['CEO', 'Founder'],
-                goodAt: ['being CEO'],
+                description: 'Greater the code, greater the world',
+                position: ['Senior Developer', 'Backend Developer'],
+                goodAt: [''],
                 contact: {
                     facebook: null,
                     linkedin: null,
@@ -719,7 +731,6 @@
                     }
                     element.find('#description').text(description.description);
                     element.find('#good-at').empty();
-                    element.find('#good-at').append('Good at: ');
                     _.each(description.goodAt, function(d) {
                         element.find('#good-at').append('<span class="good-at right label label-default label-default-tech">' + d +'</span>');
                     });
@@ -762,14 +773,13 @@
             });
         };
 
-        $('.person').fadeTo(0, inactive);
+        //$('.person').fadeTo(0, inactive);
         $('.line').fadeTo(0, inactive);
         $(active.person).fadeTo(0, 1);
-        //$('.description-center').fadeTo(0, 0);
-        $('.kt').fadeTo(0, 0);
+        $('.description-center').fadeTo(0, 0);
 
         var setHoverForPerson = function (initials) {
-            $(initials + '.person').hover(function () {
+            $(initials + '.person.hoverable').hover(function () {
                 $(this).animate({
                     opacity: 1
                 });
@@ -793,6 +803,7 @@
         setHoverForPerson('.km');
         setHoverForPerson('.gs');
         setHoverForPerson('.kk');
+        setHoverForPerson('.kt');
 
         setActivePerson('.ag.person');
         setActivePerson('.ks.person');
@@ -805,6 +816,51 @@
         setActivePerson('.km.person');
         setActivePerson('.gs.person');
         setActivePerson('.kk.person');
+
+        var createDescriptionsForMobile = function() {
+            var mobileView = $('.mobile');
+            _.each(personDescription, function(man) {
+                var toAppend = '';
+                toAppend += '<div class="worker">' +
+                '<div class="row">' +
+                '<div class="col-sm-3 col-xs-12 vcenter">' +
+                '<div class="person ' + man.initials + '"></div></div><!--' +
+                '--><div class="col-sm-9 col-xs-12 vcenter">' +
+                '<h2 class="name">' + man.name + '</h2>' +
+                '<hr>' +
+                '<h6><span class="position label label-default label-default-tech">' + man.position[0] + '</span>';
+
+                if (man.position[1]) {
+                    toAppend += '<span class="position label label-default label-default-tech">' + man.position[1] + '</span>';
+                }
+
+                toAppend += '</h6><p class="description">' + man.description +'</p>' +
+                '<h6>' +
+                'Characteristics:' +
+                '<div class="good-at">';
+
+                _.each(man.goodAt, function(feature) {
+                    toAppend += '<span class="good-at right label label-default label-default-tech">' + feature + '</span>';
+                });
+
+                toAppend += '</div>' +
+                '</h6>' +
+                '<h1 class="contact">';
+
+                $.each(man.contact, function(key, value) {
+                    if (value) {
+                        toAppend += '<a href="' + value + '" class="my-facebook" target="_blank"><i class="fa fa-' + key + '"></i></a>';
+                    }
+                });
+
+                toAppend += '</h1>' +
+                '</div></div><hr>';
+
+                mobileView.append(toAppend);
+            });
+        };
+
+        createDescriptionsForMobile();
     });
 })(this.jQuery);
 
