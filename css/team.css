@@ -29,16 +29,20 @@
 }
 
 .description-center .label {
-    cursor: default;
     display: inline-block;
+    margin-right: 10px;
+}
+.team .label {
+    cursor:default;
+}
+@media only screen and (min-width: 992px) {
+    .description-center h6 .label {
+        font-size: 90%;
+    }
 }
 
 .description-center hr {
     margin: 10px 0;
-}
-
-.description-center .label {
-    margin: 15px 10px 10px 0;
 }
 
 .description-center #description {
@@ -582,6 +586,13 @@
     .mobile #contact {
         margin: 0;
     }
+    .mobile .contact a {
+        margin-right: 5px;
+    }
+    .mobile .label {
+        display: inline-block;
+        margin-right: 5px;
+    }
     .worker {
         margin: 20px 0;
     }
@@ -591,17 +602,10 @@
     .mobile .person {
         margin: 0 auto;
     }
-    .mobile .label {
-        display: inline-block;
-        margin-right: 5px;
-    }
     .mobile h1,
     .mobile h2,
     .mobile h6,
     .mobile p {
         text-align: center;
-    }
-    .mobile .contact a {
-        margin-right: 5px;
     }
 }

@@ -538,40 +538,41 @@
                 name: 'Agnieszka Głowacka',
                 description: 'Responsible for all those poor guys in our software house, which make me kind of Sigmapoint Queen.',
                 position: ['Business Development Specialist', null],
-                goodAt: ['3D modeling enthusiast'],
+                goodAt: ['3D modeling enthusiast', 'the only girl', 'always make people laugh'],
                 contact: {
                     facebook: null,
-                    linkedin: null,
+                    linkedin: 'https://pl.linkedin.com/in/agaglowacka',
                     github: null,
-                    website: null,
-                    twitter: null
+                    globe: null,
+                    twitter: 'https://twitter.com/glowacka_aga',
+                    at: 'mailto:agnieszka.glowacka@sigmapoint.pl'
                 }
             },
             ks: {
                 initials: 'ks',
                 name: 'Kamil Stanuch',
-                description: 'Lorem ipsum',
-                position: ['CEO', 'Founder'],
-                goodAt: ['being CEO'],
+                description: '',
+                position: ['CEO', 'Co-Founder'],
+                goodAt: ['', ''],
                 contact: {
                     facebook: null,
                     linkedin: null,
                     github: null,
-                    website: null,
+                    globe: null,
                     twitter: null
                 }
             },
             mp: {
                 initials: 'mp',
                 name: 'Mateusz Pluta',
-                description: 'Lorem ipsum',
-                position: ['CEO', 'Founder'],
-                goodAt: ['being CEO'],
+                description: '',
+                position: ['CEO', 'Co-Founder'],
+                goodAt: ['Good Father'],
                 contact: {
                     facebook: null,
                     linkedin: null,
                     github: null,
-                    website: null,
+                    globe: null,
                     twitter: null
                 }
             },
@@ -585,77 +586,77 @@
                     facebook: null,
                     linkedin: 'https://pl.linkedin.com/in/kamilburczyk',
                     github: 'https://github.com/burczyk',
-                    website: 'blog.sigmapoint.pl',
+                    globe: 'blog.sigmapoint.pl',
                     twitter: 'https://twitter.com/KamilBurczyk'
                 }
             },
             kt: {
                 initials: 'kt',
                 name: 'Krzysztof Tsitsaris',
-                description: 'Lorem ipsum',
-                position: ['CEO', 'Founder'],
+                description: '',
+                position: ['iOS Developer'],
                 goodAt: ['being CEO'],
                 contact: {
                     facebook: null,
                     linkedin: null,
                     github: null,
-                    website: null,
+                    globe: null,
                     twitter: null
                 }
             },
             kd: {
                 initials: 'kd',
                 name: 'Kamil Demczuk',
-                description: 'Lorem ipsum',
-                position: ['CEO', 'Founder'],
-                goodAt: ['being CEO'],
+                description: '',
+                position: ['Android Developer', 'iOS Developer'],
+                goodAt: ['Head of Mobile'],
                 contact: {
                     facebook: null,
                     linkedin: null,
                     github: null,
-                    website: null,
+                    globe: null,
                     twitter: null
                 }
             },
             jp: {
                 initials: 'jp',
                 name: 'Jakub Pelczar',
-                description: 'Lorem ipsum',
-                position: ['CEO', 'Founder'],
-                goodAt: ['being CEO'],
+                description: '',
+                position: ['Android Developer'],
+                goodAt: [''],
                 contact: {
-                    facebook: null,
-                    linkedin: null,
-                    github: null,
-                    website: null,
+                    facebook: 'https://www.facebook.com/kubapelczar',
+                    linkedin: ' https://pl.linkedin.com/in/jakubpelczar',
+                    github: 'https://github.com/jpelczar',
+                    globe: null,
                     twitter: null
                 }
             },
             pz: {
                 initials: 'pz',
                 name: 'Paweł Żak',
-                description: 'Lorem ipsum',
-                position: ['CEO', 'Founder'],
-                goodAt: ['being CEO'],
+                description: '',
+                position: ['Android Developer'],
+                goodAt: [''],
                 contact: {
                     facebook: null,
                     linkedin: null,
                     github: null,
-                    website: null,
+                    globe: null,
                     twitter: null
                 }
             },
             pb: {
                 initials: 'pb',
                 name: 'Przemysław Burczyk',
-                description: 'Lorem ipsum',
-                position: ['CEO', 'Founder'],
-                goodAt: ['being CEO'],
+                description: '',
+                position: ['Android Developer, Windows Phone Developer'],
+                goodAt: [''],
                 contact: {
                     facebook: null,
                     linkedin: null,
                     github: null,
-                    website: null,
+                    globe: null,
                     twitter: null
                 }
             },
@@ -669,35 +670,35 @@
                     facebook: null,
                     linkedin: null,
                     github: null,
-                    website: null,
+                    globe: null,
                     twitter: null
                 }
             },
             km: {
                 initials: 'km',
                 name: 'Karol Majta',
-                description: 'Lorem ipsum',
-                position: ['CEO', 'Founder'],
-                goodAt: ['being CEO'],
+                description: 'To the infinity and beyond!',
+                position: ['Frontend Developer', 'Backend Developer'],
+                goodAt: [''],
                 contact: {
                     facebook: null,
-                    linkedin: null,
+                    linkedin: 'https://pl.linkedin.com/in/karolmanija',
                     github: null,
-                    website: null,
+                    globe: null,
                     twitter: null
                 }
             },
             gs: {
                 initials: 'gs',
                 name: 'Grzegorz Sikorski',
-                description: 'Greater the code, greater the world',
+                description: 'The greater the code, the greater the world',
                 position: ['Senior Developer', 'Backend Developer'],
                 goodAt: [''],
                 contact: {
                     facebook: null,
                     linkedin: null,
                     github: null,
-                    website: null,
+                    globe: null,
                     twitter: null
                 }
             }
@@ -728,6 +729,7 @@
                         element.find('#good-at').append('<span class="good-at right label label-default label-default-tech">' + d +'</span>');
                     });
                     $.each(description.contact, function(key, value) {
+                        element.find('.my-at').hide();
                         if (value) {
                             element.find('.my-' + key).show().attr("href", value);
                         }
@@ -819,7 +821,6 @@
                 '<div class="person ' + man.initials + '"></div></div><!--' +
                 '--><div class="col-sm-9 col-xs-12 vcenter">' +
                 '<h2 class="name">' + man.name + '</h2>' +
-                '<hr>' +
                 '<h6><span class="position label label-default label-default-tech">' + man.position[0] + '</span>';
 
                 if (man.position[1]) {
@@ -841,7 +842,7 @@
 
                 $.each(man.contact, function(key, value) {
                     if (value) {
-                        toAppend += '<a href="' + value + '" class="my-facebook" target="_blank"><i class="fa fa-' + key + '"></i></a>';
+                        toAppend += '<a href="' + value + '" class="my-' + key + '" target="_blank"><i class="fa fa-' + key + '"></i></a>';
                     }
                 });
 
