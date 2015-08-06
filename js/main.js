@@ -567,7 +567,7 @@
                 name: 'Mateusz Pluta',
                 description: '',
                 position: ['CEO', 'Co-Founder'],
-                goodAt: ['Good Father'],
+                goodAt: ['Goodfather'],
                 contact: {
                     facebook: null,
                     linkedin: null,
@@ -691,9 +691,9 @@
             gs: {
                 initials: 'gs',
                 name: 'Grzegorz Sikorski',
-                description: 'The greater the code, the greater the world',
+                description: 'The greater the code, the greater the world. Well, then I\'m making the world better',
                 position: ['Senior Developer', 'Backend Developer'],
-                goodAt: [''],
+                goodAt: ['GIT fighter', 'golf III driver'],
                 contact: {
                     facebook: null,
                     linkedin: null,
@@ -758,6 +758,7 @@
                             opacity: inactive
                         });
                     });
+                    $('.background').show();
                     setActiveDescription(initials);
                     activePerson = initials;
                 }
@@ -765,16 +766,20 @@
                     if (initials !== activePerson) {
                         setActiveDescription(initials);
                         $(activePerson + '.hoverable').animate({
-                            opacity: inactive
+                            opacity: inactive,
+                            'z-index': 5
                         });
                         $(activePerson + '.line').animate({
-                            opacity: inactive
+                            opacity: inactive,
+                            'z-index': 5
                         });
                         $(initials + '.hoverable').animate({
-                            opacity: 1
+                            opacity: 1,
+                            'z-index': 100
                         });
                         $(initials + '.line').animate({
-                            opacity: 1
+                            opacity: 1,
+                            'z-index': 100
                         });
                         activePerson = initials;
                     }
@@ -789,6 +794,7 @@
                                 opacity: 1
                             });
                         });
+                        $('.background').hide();
                         activePerson = null;
                     }
                 }
@@ -853,6 +859,19 @@
             });
         };
 
+        $('.background').click(function() {
+            setActiveDescription('none');
+            $.each(personDescription, function(key, value) {
+                $('.' + key + '.person.hoverable').animate({
+                    opacity: 1
+                });
+                $('.' + key + '.line').animate({
+                    opacity: 1
+                });
+            });
+            $('.background').hide();
+            activePerson = null;
+        });
 
 
         //Initials
@@ -885,7 +904,7 @@
         setActivePerson('.kt.person.hoverable');
 
         $('.description-center').fadeTo(0, 0);
-
+        $('.background').hide();
 
         var inactive = 0.1;
 
