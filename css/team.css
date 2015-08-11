@@ -6,7 +6,7 @@
     position: absolute;
     width: 100%;
     height: 1200px;
-    z-index: 3;
+    z-index: 8;
 }
 
 .team .center {
@@ -19,14 +19,14 @@
 
 .team .description-center {
     width: 403px;
-    height: 316px;
+    min-height: 316px;
     position: absolute;
     top: 350px;
     left: 384px;
     background-color: #fff;
     border: 2px solid #E74C3C;
     border-radius: 20px;
-    z-index: 100;
+    z-index: 10;
     box-sizing: border-box;
     padding: 0 30px;
 }
@@ -42,8 +42,17 @@
 .team .label {
     cursor:default;
 }
+
+.team h1,
+.team h2,
+.team h6 {
+    text-align: center;
+}
+.team #contact a {
+    margin-right: 25px;
+}
 @media only screen and (min-width: 992px) {
-    .description-center h6 .label {
+    .description-center .label {
         font-size: 90%;
     }
 }
@@ -73,7 +82,7 @@
     border: 2px solid #E74C3C;
     color: #000000;
     background-color: #fff;
-    z-index: 5;
+    z-index: 10;
 }
 
 .person.hoverable {
@@ -125,7 +134,7 @@
     background-size: 100%;
 }
 .person.gs {
-    background: url('../images/team/hs_person.jpg') 0 0 no-repeat;
+    background: url('../images/team/gs_person.jpg') 0 0 no-repeat;
     background-size: 100%;
 }
 
@@ -327,7 +336,7 @@
 .stitch {
     position: absolute;
     background-color: rgb(85,85,85);
-    z-index: 110;
+    z-index: 7;
 }
 
 .stitch.description {
@@ -550,7 +559,7 @@
 
     .team .description-center {
         width: 331px;
-        height: 260px;
+        min-height: 260px;
         top: 292px;
         left: 319px;
     }
@@ -595,7 +604,7 @@
         margin: 0;
     }
     .mobile .contact a {
-        margin-right: 5px;
+        margin-right: 20px;
     }
     .mobile .label {
         display: inline-block;

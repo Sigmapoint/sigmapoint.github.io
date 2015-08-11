@@ -536,9 +536,9 @@
             ag: {
                 initials: 'ag',
                 name: 'Agnieszka Głowacka',
-                description: 'Responsible for all those poor guys in our software house, which make me kind of Sigmapoint Queen.',
+                description: 'In everyday life I combine natural talent for working with people in a challenging environment of interdisciplinary teams operating under constant pressure of time with enthusiasm for modern technologies.',
                 position: ['Business Development Specialist', null],
-                goodAt: ['3D modeling enthusiast', 'the only girl', 'always make people laugh'],
+                characteristics: ['3D Modeling Enthusiast', 'The Only Girl', 'Always Make People Laugh'],
                 contact: {
                     facebook: null,
                     linkedin: 'https://pl.linkedin.com/in/agaglowacka',
@@ -551,9 +551,9 @@
             ks: {
                 initials: 'ks',
                 name: 'Kamil Stanuch',
-                description: '',
+                description: 'Big fan of Statistics, R, SPSS, Power Point and always happy to help. Graduated from the Jagiellonian University (B.Sc. in Literature , M.Sc. in Social Research & Data Analysis) and Harvard Summer School (Macroeconomics, International Marketing).',
                 position: ['CEO', 'Co-Founder'],
-                goodAt: ['', ''],
+                characteristics: ['Co-Founder at Sigmapoint', 'Born Gentleman', 'Natural Leader'],
                 contact: {
                     facebook: null,
                     linkedin: null,
@@ -565,9 +565,9 @@
             mp: {
                 initials: 'mp',
                 name: 'Mateusz Pluta',
-                description: '',
-                position: ['CEO', 'Co-Founder'],
-                goodAt: ['Goodfather'],
+                description: 'I\'ve got a lovely daughter. And 10 other kids in Sigmapoint which just look like a bunch of grown men.',
+                position: ['COO', 'Co-Founder'],
+                characteristics: ['Co-Founder at Sigmapoint', 'Goodfather'],
                 contact: {
                     facebook: null,
                     linkedin: null,
@@ -581,7 +581,7 @@
                 name: 'Kamil Burczyk',
                 description: 'I love high quality and simplicity that\'s why I became Apple fan. The same features I value in development so building every product leads to customer satisfaction.',
                 position: ['CTO', 'Co-Founder', 'iOS Developer'],
-                goodAt: ['Co-Founder at Sigmapoint', 'fitness and technology geek', 'Apple fan'],
+                characteristics: ['Co-Founder at Sigmapoint', 'fitness and technology geek', 'Apple fan'],
                 contact: {
                     facebook: null,
                     linkedin: 'https://pl.linkedin.com/in/kamilburczyk',
@@ -593,9 +593,9 @@
             kt: {
                 initials: 'kt',
                 name: 'Krzysztof Tsitsaris',
-                description: '',
+                description: 'Let me help you - Tsitsaris pronounces as \'Cicaris\'.',
                 position: ['iOS Developer'],
-                goodAt: ['being CEO'],
+                characteristics: ['Speaking Greek', 'Speaking Polish', 'Speaking Objective-C', 'Speaking Swift'],
                 contact: {
                     facebook: null,
                     linkedin: null,
@@ -608,8 +608,8 @@
                 initials: 'kd',
                 name: 'Kamil Demczuk',
                 description: '',
-                position: ['Android Developer', 'iOS Developer'],
-                goodAt: ['Head of Mobile'],
+                position: ['Head of Mobile'],
+                characteristics: [''],
                 contact: {
                     facebook: null,
                     linkedin: null,
@@ -623,7 +623,7 @@
                 name: 'Jakub Pelczar',
                 description: '',
                 position: ['Android Developer'],
-                goodAt: [''],
+                characteristics: [''],
                 contact: {
                     facebook: 'https://www.facebook.com/kubapelczar',
                     linkedin: ' https://pl.linkedin.com/in/jakubpelczar',
@@ -635,9 +635,9 @@
             pz: {
                 initials: 'pz',
                 name: 'Paweł Żak',
-                description: '',
+                description: 'Funny fact: when you read my initials, it will sound like "Peugeot". Just use your imagination!',
                 position: ['Android Developer'],
-                goodAt: [''],
+                characteristics: ['Libraries Finder'],
                 contact: {
                     facebook: null,
                     linkedin: null,
@@ -649,12 +649,12 @@
             pb: {
                 initials: 'pb',
                 name: 'Przemysław Burczyk',
-                description: '',
-                position: ['Android Developer, Windows Phone Developer'],
-                goodAt: [''],
+                description: 'There are two great things in the world: Volvo cars and #FF8200',
+                position: ['Android Developer', 'Windows Phone Developer'],
+                characteristics: ['Orange For Life', 'Volvo For Life'],
                 contact: {
                     facebook: null,
-                    linkedin: null,
+                    linkedin: 'https://pl.linkedin.com/in/karolmanijak',
                     github: null,
                     globe: null,
                     twitter: null
@@ -665,7 +665,7 @@
                 name: 'Karol Manijak',
                 description: 'I really like sleeping which force me to be yerba-mate-lover. Fan of minimalism in all aspects of life.',
                 position: ['Frontend Developer', 'Web designer'],
-                goodAt: ['Almost graduated physicist', 'Esthete', ''],
+                characteristics: ['Almost graduated physicist', 'Esthete', 'Movie maniac'],
                 contact: {
                     facebook: null,
                     linkedin: null,
@@ -679,10 +679,10 @@
                 name: 'Karol Majta',
                 description: 'To the infinity and beyond!',
                 position: ['Frontend Developer', 'Backend Developer'],
-                goodAt: [''],
+                characteristics: ['Roller skates rider', 'Crouching Tiger', 'Hidden Dragon'],
                 contact: {
                     facebook: null,
-                    linkedin: 'https://pl.linkedin.com/in/karolmanija',
+                    linkedin: null,
                     github: null,
                     globe: null,
                     twitter: null
@@ -693,7 +693,7 @@
                 name: 'Grzegorz Sikorski',
                 description: 'The greater the code, the greater the world. Well, then I\'m making the world better',
                 position: ['Senior Developer', 'Backend Developer'],
-                goodAt: ['GIT fighter', 'golf III driver'],
+                characteristics: ['GIT Fighter', 'Golf III Driver', 'Indian Food Lover'],
                 contact: {
                     facebook: null,
                     linkedin: null,
@@ -725,7 +725,7 @@
                     }
                     element.find('#description').text(description.description);
                     element.find('#good-at').empty();
-                    _.each(description.goodAt, function(d) {
+                    _.each(description.characteristics, function(d) {
                         element.find('#good-at').append('<span class="good-at right label label-default label-default-tech">' + d +'</span>');
                     });
                     $.each(description.contact, function(key, value) {
@@ -767,7 +767,7 @@
                         setActiveDescription(initials);
                         $(activePerson + '.hoverable').animate({
                             opacity: inactive,
-                            'z-index': 5
+                            'z-index': 50
                         });
                         $(activePerson + '.line').animate({
                             opacity: inactive,
@@ -779,7 +779,7 @@
                         });
                         $(initials + '.line').animate({
                             opacity: 1,
-                            'z-index': 100
+                            'z-index': 6
                         });
                         activePerson = initials;
                     }
@@ -838,7 +838,7 @@
                 'Characteristics:' +
                 '<div class="good-at">';
 
-                _.each(man.goodAt, function(feature) {
+                _.each(man.characteristics, function(feature) {
                     toAppend += '<span class="good-at right label label-default label-default-tech">' + feature + '</span>';
                 });
 
