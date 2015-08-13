@@ -607,15 +607,15 @@
             kd: {
                 initials: 'kd',
                 name: 'Kamil Demczuk',
-                description: '',
+                description: 'I\'m dedicated to contributing to the company\'s growth by continuous development of my programming and management skills. Despite of my Android background, I do like Apple products and I\'m crazy about mobile.',
                 position: ['Head of Mobile'],
-                characteristics: [''],
+                characteristics: ['Mobile Technology Enthusiast', 'Perfectionist', 'Sports Lover'],
                 contact: {
                     facebook: null,
-                    linkedin: null,
+                    linkedin: 'https://pl.linkedin.com/pub/kamil-demczuk/70/189/622',
                     github: null,
                     globe: null,
-                    twitter: null
+                    twitter: 'https://twitter.com/DemczukKamil?lang=en'
                 }
             },
             jp: {
