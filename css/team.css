@@ -49,7 +49,7 @@
     text-align: center;
 }
 .team #contact a {
-    margin-right: 25px;
+    margin: 0 12px;
 }
 @media only screen and (min-width: 992px) {
     .description-center .label {
@@ -62,7 +62,7 @@
 }
 
 .description-center #description {
-    margin-top: 10px;
+    margin: 20px 0;
     text-align: justify;
 }
 
@@ -474,13 +474,13 @@
         transform: translateY(-28px);
     }
     .line.kb.ios {
-        transform: translateY(-53px);
+        transform: translateY(-54px);
     }
     .line.kt {
         transform: translateY(-82px);
     }
     .line.kd.ios {
-        transform: translateY(-87px);
+        transform: translateY(-85px);
     }
     .line.kd.android {
         transform: translateY(-98px);
@@ -566,12 +566,12 @@
 
     .description-center h2,
     .description-center hr,
-    .description-center #description,
     .description-center h6 {
-        margin: 5px 0 0 0;
+        margin: 10px 0;
     }
     .description-center #description {
         line-height: 18px;
+        margin: 20px 0;
     }
     .description-center h6 {
         line-height: 18px;
@@ -588,25 +588,25 @@
     .team {
         height: auto;
     }
-    .mobile .person {
+    .mobile-team .person {
         position: relative;
     }
-    .mobile h1 {
+    .mobile-team h1 {
         padding: 0;
     }
-    .mobile h2 {
+    .mobile-team h2 {
         margin: 10px 0;
     }
-    .mobile hr {
+    .mobile-team hr {
         margin: 10px 0;
     }
-    .mobile #contact {
+    .mobile-team #contact {
         margin: 0;
     }
-    .mobile .contact a {
-        margin-right: 20px;
+    .mobile-team .contact a {
+        margin: 0 15px;
     }
-    .mobile .label {
+    .mobile-team .label {
         display: inline-block;
         margin-right: 5px;
     }
@@ -616,13 +616,13 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .mobile .person {
+    .mobile-team .person {
         margin: 0 auto;
     }
-    .mobile h1,
-    .mobile h2,
-    .mobile h6,
-    .mobile p {
+    .mobile-team h1,
+    .mobile-team h2,
+    .mobile-team h6,
+    .mobile-team p {
         text-align: center;
     }
 }

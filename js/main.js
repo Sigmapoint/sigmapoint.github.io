@@ -536,7 +536,7 @@
             ag: {
                 initials: 'ag',
                 name: 'Agnieszka Głowacka',
-                description: 'In everyday life I combine natural talent for working with people in a challenging environment of interdisciplinary teams operating under constant pressure of time with enthusiasm for modern technologies.',
+                description: 'In everyday life I combine natural talent for working with people in a challenging environment of interdisciplinary teams operating under constant pressure of time with enthusiasm for modern technologies. ',
                 position: ['Business Development Specialist', null],
                 characteristics: ['3D Modeling Enthusiast', 'The Only Girl', 'Always Make People Laugh'],
                 contact: {
@@ -552,25 +552,25 @@
                 initials: 'ks',
                 name: 'Kamil Stanuch',
                 description: 'Big fan of Statistics, R, SPSS, Power Point and always happy to help. Graduated from the Jagiellonian University (B.Sc. in Literature , M.Sc. in Social Research & Data Analysis) and Harvard Summer School (Macroeconomics, International Marketing).',
-                position: ['CEO', 'Co-Founder'],
-                characteristics: ['Co-Founder at Sigmapoint', 'Born Gentleman', 'Natural Leader'],
+                position: ['Board Member', 'Co-Founder'],
+                characteristics: ['Co-Founder at Sigmapoint', 'Lean startup practitioner'],
                 contact: {
                     facebook: null,
-                    linkedin: null,
+                    linkedin: 'https://pl.linkedin.com/in/kamilstanuch',
                     github: null,
                     globe: null,
-                    twitter: null
+                    twitter: 'https://twitter.com/kamilstanuch'
                 }
             },
             mp: {
                 initials: 'mp',
                 name: 'Mateusz Pluta',
-                description: 'I\'ve got a lovely daughter. And 10 other kids in Sigmapoint which just look like a bunch of grown men.',
-                position: ['COO', 'Co-Founder'],
+                description: 'Fan of mobile tech and Android (but still bought his wife an iPhone). Deep into agile management.',
+                position: ['Board Member', 'Co-Founder'],
                 characteristics: ['Co-Founder at Sigmapoint', 'Goodfather'],
                 contact: {
                     facebook: null,
-                    linkedin: null,
+                    linkedin: 'https://www.linkedin.com/in/plutamateusz',
                     github: null,
                     globe: null,
                     twitter: null
@@ -581,12 +581,12 @@
                 name: 'Kamil Burczyk',
                 description: 'I love high quality and simplicity that\'s why I became Apple fan. The same features I value in development so building every product leads to customer satisfaction.',
                 position: ['CTO', 'Co-Founder', 'iOS Developer'],
-                characteristics: ['Co-Founder at Sigmapoint', 'fitness and technology geek', 'Apple fan'],
+                characteristics: ['Co-Founder at Sigmapoint', 'Fitness and Technology Geek', 'Apple Fan'],
                 contact: {
                     facebook: null,
                     linkedin: 'https://pl.linkedin.com/in/kamilburczyk',
                     github: 'https://github.com/burczyk',
-                    globe: 'blog.sigmapoint.pl',
+                    globe: 'http://blog.sigmapoint.pl',
                     twitter: 'https://twitter.com/KamilBurczyk'
                 }
             },
@@ -598,7 +598,7 @@
                 characteristics: ['Speaking Greek', 'Speaking Polish', 'Speaking Objective-C', 'Speaking Swift'],
                 contact: {
                     facebook: null,
-                    linkedin: null,
+                    linkedin: 'https://pl.linkedin.com/pub/chris-tsitsaris/103/577/571',
                     github: null,
                     globe: null,
                     twitter: null
@@ -621,9 +621,9 @@
             jp: {
                 initials: 'jp',
                 name: 'Jakub Pelczar',
-                description: '',
+                description: 'Aka \'Mystery\'. I\'ve got more secrets than code lines written. Then why don\'t we talk about you?',
                 position: ['Android Developer'],
-                characteristics: [''],
+                characteristics: ['Lanos Fanboy', 'Jedi', 'Grill Master'],
                 contact: {
                     facebook: 'https://www.facebook.com/kubapelczar',
                     linkedin: ' https://pl.linkedin.com/in/jakubpelczar',
@@ -637,10 +637,10 @@
                 name: 'Paweł Żak',
                 description: 'Funny fact: when you read my initials, it will sound like "Peugeot". Just use your imagination!',
                 position: ['Android Developer'],
-                characteristics: ['Libraries Finder'],
+                characteristics: ['Libraries Finder', 'Nexus Lover'],
                 contact: {
                     facebook: null,
-                    linkedin: null,
+                    linkedin: 'https://www.linkedin.com/in/pawelzak',
                     github: null,
                     globe: null,
                     twitter: null
@@ -650,12 +650,12 @@
                 initials: 'pb',
                 name: 'Przemysław Burczyk',
                 description: 'There are two great things in the world: Volvo cars and #FF8200',
-                position: ['Android Developer', 'Windows Phone Developer'],
-                characteristics: ['Orange For Life', 'Volvo For Life'],
+                position: ['Mobile (Android and Windows Phone) Developer', 'Web Developer'],
+                characteristics: ['Sophisticated Joke Master', 'Silent Perfectionist'],
                 contact: {
-                    facebook: null,
-                    linkedin: 'https://pl.linkedin.com/in/karolmanijak',
-                    github: null,
+                    facebook: 'https://facebook.com/przemek.burczyk',
+                    linkedin: 'https://pl.linkedin.com/in/przemyslawburczyk',
+                    github: 'https://github.com/PrzemekBurczyk',
                     globe: null,
                     twitter: null
                 }
@@ -665,10 +665,10 @@
                 name: 'Karol Manijak',
                 description: 'I really like sleeping which force me to be yerba-mate-lover. Fan of minimalism in all aspects of life.',
                 position: ['Frontend Developer', 'Web designer'],
-                characteristics: ['Almost graduated physicist', 'Esthete', 'Movie maniac'],
+                characteristics: ['Almost Graduated Physicist', 'Esthete', 'Movie Maniac'],
                 contact: {
                     facebook: null,
-                    linkedin: null,
+                    linkedin: 'https://pl.linkedin.com/in/karolmanijak',
                     github: null,
                     globe: null,
                     twitter: null
@@ -677,26 +677,26 @@
             km: {
                 initials: 'km',
                 name: 'Karol Majta',
-                description: 'To the infinity and beyond!',
+                description: 'Lisper imprisoned in a body of JS developer.',
                 position: ['Frontend Developer', 'Backend Developer'],
-                characteristics: ['Roller skates rider', 'Crouching Tiger', 'Hidden Dragon'],
+                characteristics: ['I didn\'t say it won\'t work, I said it\'s not *right*'],
                 contact: {
                     facebook: null,
                     linkedin: null,
                     github: null,
-                    globe: null,
+                    globe: 'http://blog.sigmapoint.pl/author/karol-majta/',
                     twitter: null
                 }
             },
             gs: {
                 initials: 'gs',
                 name: 'Grzegorz Sikorski',
-                description: 'The greater the code, the greater the world. Well, then I\'m making the world better',
+                description: 'The greater the code, the greater the world. Well, then I\'m making the world better.',
                 position: ['Senior Developer', 'Backend Developer'],
                 characteristics: ['GIT Fighter', 'Golf III Driver', 'Indian Food Lover'],
                 contact: {
                     facebook: null,
-                    linkedin: null,
+                    linkedin: 'https://pl.linkedin.com/pub/grzegorz-sikorski/a7/b53/60b',
                     github: null,
                     globe: null,
                     twitter: null
@@ -710,6 +710,7 @@
                 element.animate({
                     opacity: 0
                 });
+                element.css('pointer-events', 'none');
             }
             else {
                 var description = personDescription[initials.substr(1,2)];
@@ -741,6 +742,7 @@
                     element.animate({
                         opacity: 1
                     });
+                    element.css('pointer-events', 'all');
                 });
             }
         };
@@ -818,7 +820,7 @@
         };
 
         var createDescriptionsForMobile = function() {
-            var mobileView = $('.mobile');
+            var mobileView = $('.mobile-team');
             _.each(personDescription, function(man) {
                 var toAppend = '';
                 toAppend += '<div class="worker">' +
@@ -904,6 +906,7 @@
         setActivePerson('.kt.person.hoverable');
 
         $('.description-center').fadeTo(0, 0);
+        $('.description-center').css('pointer-events', 'none');
         $('.background').hide();
 
         var inactive = 0.1;
