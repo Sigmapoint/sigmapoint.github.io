@@ -691,9 +691,9 @@
             gs: {
                 initials: 'gs',
                 name: 'Grzegorz Sikorski',
-                description: 'The greater the code, the greater the world. Well, then I\'m making the world better.',
+                description: 'Less code is better code.',
                 position: ['Senior Developer', 'Backend Developer'],
-                characteristics: ['GIT Fighter', 'Golf III Driver', 'Indian Food Lover'],
+                characteristics: ['GIT Fighter', 'Guitarist wannabe', 'Indian Food Lover'],
                 contact: {
                     facebook: null,
                     linkedin: 'https://pl.linkedin.com/pub/grzegorz-sikorski/a7/b53/60b',
