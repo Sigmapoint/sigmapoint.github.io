@@ -533,6 +533,20 @@
 
         /* TEAM */
         var personDescription = {
+            kb: {
+                initials: 'kb',
+                name: 'Kamil Burczyk',
+                description: 'I love high quality and simplicity that\'s why I became Apple fan. The same features I value in development so building every product leads to customer satisfaction.',
+                position: ['CTO', 'Co-Founder', 'iOS Developer'],
+                characteristics: ['Co-Founder at Sigmapoint', 'Fitness and Technology Geek', 'Apple Fan'],
+                contact: {
+                    facebook: null,
+                    linkedin: 'https://pl.linkedin.com/in/kamilburczyk',
+                    github: 'https://github.com/burczyk',
+                    globe: 'http://blog.sigmapoint.pl',
+                    twitter: 'https://twitter.com/KamilBurczyk'
+                }
+            },
             ag: {
                 initials: 'ag',
                 name: 'Agnieszka Głowacka',
@@ -574,20 +588,6 @@
                     github: null,
                     globe: null,
                     twitter: null
-                }
-            },
-            kb: {
-                initials: 'kb',
-                name: 'Kamil Burczyk',
-                description: 'I love high quality and simplicity that\'s why I became Apple fan. The same features I value in development so building every product leads to customer satisfaction.',
-                position: ['CTO', 'Co-Founder', 'iOS Developer'],
-                characteristics: ['Co-Founder at Sigmapoint', 'Fitness and Technology Geek', 'Apple Fan'],
-                contact: {
-                    facebook: null,
-                    linkedin: 'https://pl.linkedin.com/in/kamilburczyk',
-                    github: 'https://github.com/burczyk',
-                    globe: 'http://blog.sigmapoint.pl',
-                    twitter: 'https://twitter.com/KamilBurczyk'
                 }
             },
             kt: {
@@ -649,7 +649,7 @@
             pb: {
                 initials: 'pb',
                 name: 'Przemysław Burczyk',
-                description: 'There are two great things in the world: Volvo cars and #FF8200',
+                description: 'There are two great things in the world: Volvo cars and #FF8200.',
                 position: ['Mobile (Android and Windows Phone) Developer', 'Web Developer'],
                 characteristics: ['Sophisticated Joke Master', 'Silent Perfectionist'],
                 contact: {

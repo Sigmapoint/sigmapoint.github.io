@@ -10,7 +10,7 @@
 }
 
 .team .center {
-    background: url('../images/team/center.png') 0 0 no-repeat;
+    background: url('../images/team/center4.png') 0 0 no-repeat;
     width: 35.2%;
     height: 500px;
     background-size: 100%;
@@ -291,7 +291,7 @@
     width: 16.02%;
     height: 230px;
     top: 579px;
-    left: calc(17% - 2px);
+    left: calc(17% - 1px);
 }
 
 .person.kk.hoverable {
@@ -472,6 +472,15 @@
 
     .line {
         transform: translateY(-28px);
+    }
+    .line.ks {
+        transform: translate(-1px,-28px);
+    }
+    .line.mp {
+        transform: translate(-1px,-28px);
+    }
+    .line.kb.ceo {
+        transform: translate(-1px,-28px);
     }
     .line.kb.ios {
         transform: translateY(-54px);
