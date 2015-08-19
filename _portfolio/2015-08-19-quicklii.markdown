@@ -5,7 +5,7 @@ image: images/portfolio/Sigmapoint_Quicklii_iOS_app.jpg
 technologies:
   - iOS
 available:
-  appstore: itms://itunes.apple.com/us/app/apple-store/id998859909?mt=8
+  appstore: https://itunes.apple.com/pl/app/quicklii/id998859909?mt=8&ign-mpt=uo%3D4
 ---
 
 The easiest way to buy and sell stuff locally.
