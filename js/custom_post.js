@@ -42,7 +42,8 @@ function post_data(){
         var submit_button_old_value = submit_button.value;
         submit_button.value = 'Sending...';
 
-        var automail_url = "https://arcane-hollows-9396.herokuapp.com/sigma";
+        //var automail_url = "https://arcane-hollows-9396.herokuapp.com/sigma";
+        var automail_url = "https://sigmapoint.pl/api/mailing/sigma";
 
         $.ajax(automail_url, {
             data : JSON.stringify(data),
